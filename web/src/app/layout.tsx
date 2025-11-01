@@ -1,3 +1,4 @@
+import { ConvexClientProvider } from "@/components/convex-client-provider"
 import Footer from "@/components/footer"
 import Navbar from "@/components/navbar"
 import type { Metadata } from "next"
@@ -31,11 +32,13 @@ export default function RootLayout({
             <body
                 className={`${notoSans.className} min-h-screen bg-white text-slate-900 antialiased`}
             >
-                <div className="flex min-h-screen flex-col">
-                    <Navbar />
-                    <main className="grow">{children}</main>
-                    <Footer />
-                </div>
+                <ConvexClientProvider>
+                    <div className="flex min-h-screen flex-col">
+                        <Navbar />
+                        <main className="grow">{children}</main>
+                        <Footer />
+                    </div>
+                </ConvexClientProvider>
 
                 <Script
                     src="/api/script.js"
