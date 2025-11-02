@@ -22,17 +22,12 @@ export default async function Mk1LitePage() {
                             href="/"
                             className="inline-flex items-center gap-2 text-sm text-slate-600 transition-colors hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
                         >
-                            <Icon
-                                icon="mdi:arrow-left"
-                                className="h-4 w-4"
-                            />
+                            <Icon icon="mdi:arrow-left" className="h-4 w-4" />
                             All products
                         </Link>
                     </div>
 
-                    <div
-                        className="animate-fade-in text-center"
-                    >
+                    <div className="animate-fade-in text-center">
                         <h1 className="mb-8 text-5xl font-bold tracking-tight text-slate-900 sm:text-6xl md:text-7xl">
                             Pompyboard mk.1
                             <br />
