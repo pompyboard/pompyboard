@@ -16,31 +16,30 @@ export default async function Mk1ProPage() {
             {/* Hero Section - Lead with emotion and value */}
             <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-purple-50 to-slate-50 px-4 pt-16 pb-20 sm:pt-24 sm:pb-28">
                 <div className="mx-auto max-w-6xl">
-                    <div className="animate-fade-in mb-6 flex justify-center">
-                        <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-4 py-2 text-sm font-bold text-white shadow-lg">
-                            <Icon icon="mdi:star" className="h-4 w-4" />
-                            PRO EDITION
-                        </div>
+                    {/* Back to all products - top left */}
+                    <div className="mb-8">
+                        <Link
+                            href="/"
+                            className="inline-flex items-center gap-2 text-sm text-slate-600 transition-colors hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+                        >
+                            <Icon
+                                icon="mdi:arrow-left"
+                                className="h-4 w-4"
+                            />
+                            All products
+                        </Link>
                     </div>
 
                     <div
                         className="animate-fade-in text-center"
-                        style={{ animationDelay: "0.1s" }}
                     >
-                        <h1 className="mb-6 text-5xl font-bold tracking-tight text-slate-900 sm:text-6xl md:text-7xl">
+                        <h1 className="mb-8 text-5xl font-bold tracking-tight text-slate-900 sm:text-6xl md:text-7xl">
                             Pompyboard mk.1
                             <br />
                             <span className="gradient-text">Pro</span>
                         </h1>
-                        <p className="mx-auto mb-4 max-w-2xl text-xl text-slate-600 sm:text-2xl">
-                            8000Hz. Zero latency. Pure precision.
-                        </p>
-                        <p className="mx-auto mb-8 max-w-xl text-base text-slate-500">
-                            The tablet serious players choose when milliseconds
-                            matter
-                        </p>
 
-                        {/* Social proof before price */}
+                        {/* Social proof */}
                         <div className="mb-8 flex items-center justify-center gap-2 text-sm text-slate-600">
                             <Icon
                                 icon="mdi:account-group"
@@ -70,42 +69,13 @@ export default async function Mk1ProPage() {
                         </div>
 
                         {/* Secondary actions */}
-                        <div className="flex flex-col items-center justify-center gap-3">
+                        <div className="flex justify-center">
                             <Link
                                 href="#specs"
                                 className="text-sm font-medium text-blue-600 underline decoration-2 underline-offset-4 transition-colors hover:text-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                             >
                                 View full specifications ↓
                             </Link>
-                            <div className="flex items-center gap-4">
-                                <a
-                                    href="https://discord.gg/h27rwcBn73"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 text-sm text-slate-600 transition-colors hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
-                                >
-                                    <Icon
-                                        icon="fa-brands:discord"
-                                        className="h-4 w-4"
-                                    />
-                                    Join Discord
-                                    <Icon
-                                        icon="mdi:open-in-new"
-                                        className="h-3 w-3"
-                                    />
-                                </a>
-                                <span className="text-slate-300">•</span>
-                                <Link
-                                    href="/"
-                                    className="inline-flex items-center gap-2 text-sm text-slate-600 transition-colors hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
-                                >
-                                    <Icon
-                                        icon="mdi:arrow-left"
-                                        className="h-4 w-4"
-                                    />
-                                    All products
-                                </Link>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -178,11 +148,11 @@ export default async function Mk1ProPage() {
                             </h3>
                             <p className="mb-2 text-slate-600">
                                 20mm hover height accommodates any style: hover,
-                                drag, or tap. Open-source firmware adapts to
-                                you.
+                                drag, or tap. Fully customizable firmware adapts
+                                to you.
                             </p>
                             <p className="text-sm font-semibold text-green-700">
-                                Fully customizable
+                                Open-source and customizable
                             </p>
                         </div>
                     </div>
@@ -194,11 +164,8 @@ export default async function Mk1ProPage() {
                 <div className="mx-auto max-w-6xl">
                     <div className="mb-12 text-center">
                         <h2 className="mb-4 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
-                            The specs that matter
+                            Spec Summary
                         </h2>
-                        <p className="mx-auto max-w-2xl text-lg text-slate-600">
-                            Professional-grade components throughout
-                        </p>
                     </div>
 
                     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -244,9 +211,6 @@ export default async function Mk1ProPage() {
                         <h2 className="mb-4 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
                             Pro or Lite?
                         </h2>
-                        <p className="mx-auto max-w-2xl text-lg text-slate-600">
-                            Both are excellent. Here&apos;s how to choose.
-                        </p>
                     </div>
 
                     <div className="mb-8 overflow-hidden rounded-2xl bg-white shadow-sm">
@@ -260,9 +224,9 @@ export default async function Mk1ProPage() {
                                         <th className="p-6 text-center text-sm font-semibold text-slate-900">
                                             Lite
                                         </th>
-                                        <th className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 text-center text-sm font-semibold text-slate-900">
+                                        <th className="bg-gradient-to-br from-purple-100 to-purple-200 p-6 text-center text-sm font-semibold text-slate-900">
                                             Pro{" "}
-                                            <span className="text-xs font-normal text-slate-600">
+                                            <span className="text-xs font-normal text-slate-700">
                                                 (You&apos;re here)
                                             </span>
                                         </th>
@@ -280,10 +244,10 @@ export default async function Mk1ProPage() {
                                                 Fast
                                             </span>
                                         </td>
-                                        <td className="bg-gradient-to-br from-blue-50/30 to-purple-50/30 p-6 text-center text-sm font-semibold text-blue-900">
+                                        <td className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 text-center text-sm font-semibold text-slate-900">
                                             8000Hz
                                             <br />
-                                            <span className="text-xs font-normal text-blue-700">
+                                            <span className="text-xs font-normal text-slate-700">
                                                 8× faster
                                             </span>
                                         </td>
@@ -295,10 +259,10 @@ export default async function Mk1ProPage() {
                                         <td className="p-6 text-center text-sm text-slate-600">
                                             15mm
                                         </td>
-                                        <td className="bg-gradient-to-br from-blue-50/30 to-purple-50/30 p-6 text-center text-sm font-semibold text-blue-900">
+                                        <td className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 text-center text-sm font-semibold text-slate-900">
                                             20mm
                                             <br />
-                                            <span className="text-xs font-normal text-blue-700">
+                                            <span className="text-xs font-normal text-slate-700">
                                                 +33% range
                                             </span>
                                         </td>
@@ -310,7 +274,7 @@ export default async function Mk1ProPage() {
                                         <td className="p-6 text-center text-sm text-slate-600">
                                             All players
                                         </td>
-                                        <td className="bg-gradient-to-br from-blue-50/30 to-purple-50/30 p-6 text-center text-sm font-semibold text-blue-900">
+                                        <td className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 text-center text-sm font-semibold text-slate-900">
                                             Serious competitors
                                         </td>
                                     </tr>
@@ -321,7 +285,7 @@ export default async function Mk1ProPage() {
                                         <td className="p-6 text-center text-sm font-semibold text-slate-900">
                                             $147
                                         </td>
-                                        <td className="bg-gradient-to-br from-blue-50/30 to-purple-50/30 p-6 text-center text-sm font-semibold text-slate-900">
+                                        <td className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 text-center text-sm font-semibold text-slate-900">
                                             $247
                                         </td>
                                     </tr>
@@ -335,7 +299,7 @@ export default async function Mk1ProPage() {
                             href="/shop/mk1lite"
                             className="inline-flex items-center gap-2 rounded-full border-2 border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition-all hover:border-slate-400 hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
                         >
-                            Compare with mk.1 Lite
+                            View mk.1 Lite
                             <Icon icon="mdi:arrow-right" className="h-5 w-5" />
                         </Link>
                     </div>

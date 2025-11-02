@@ -16,28 +16,28 @@ export default async function Mk1LitePage() {
             {/* Hero Section - Lead with value proposition */}
             <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 px-4 pt-16 pb-20 sm:pt-24 sm:pb-28">
                 <div className="mx-auto max-w-6xl">
-                    <div className="animate-fade-in mb-6 flex justify-center">
-                        <div className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700 ring-1 ring-slate-200">
-                            <span>Professional Performance</span>
-                        </div>
+                    {/* Back to all products - top left */}
+                    <div className="mb-8">
+                        <Link
+                            href="/"
+                            className="inline-flex items-center gap-2 text-sm text-slate-600 transition-colors hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+                        >
+                            <Icon
+                                icon="mdi:arrow-left"
+                                className="h-4 w-4"
+                            />
+                            All products
+                        </Link>
                     </div>
 
                     <div
                         className="animate-fade-in text-center"
-                        style={{ animationDelay: "0.1s" }}
                     >
-                        <h1 className="mb-6 text-5xl font-bold tracking-tight text-slate-900 sm:text-6xl md:text-7xl">
+                        <h1 className="mb-8 text-5xl font-bold tracking-tight text-slate-900 sm:text-6xl md:text-7xl">
                             Pompyboard mk.1
                             <br />
                             <span className="gradient-text">Lite</span>
                         </h1>
-                        <p className="mx-auto mb-4 max-w-2xl text-xl text-slate-600 sm:text-2xl">
-                            Professional quality. Accessible price.
-                        </p>
-                        <p className="mx-auto mb-8 max-w-xl text-base text-slate-500">
-                            Everything serious players need to compete and
-                            improve
-                        </p>
 
                         {/* Social proof */}
                         <div className="mb-8 flex items-center justify-center gap-2 text-sm text-slate-600">
@@ -69,42 +69,13 @@ export default async function Mk1LitePage() {
                         </div>
 
                         {/* Secondary actions */}
-                        <div className="flex flex-col items-center justify-center gap-3">
+                        <div className="flex justify-center">
                             <Link
                                 href="#specs"
                                 className="text-sm font-medium text-blue-600 underline decoration-2 underline-offset-4 transition-colors hover:text-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                             >
                                 View full specifications ↓
                             </Link>
-                            <div className="flex items-center gap-4">
-                                <a
-                                    href="https://discord.gg/h27rwcBn73"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 text-sm text-slate-600 transition-colors hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
-                                >
-                                    <Icon
-                                        icon="fa-brands:discord"
-                                        className="h-4 w-4"
-                                    />
-                                    Join Discord
-                                    <Icon
-                                        icon="mdi:open-in-new"
-                                        className="h-3 w-3"
-                                    />
-                                </a>
-                                <span className="text-slate-300">•</span>
-                                <Link
-                                    href="/"
-                                    className="inline-flex items-center gap-2 text-sm text-slate-600 transition-colors hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
-                                >
-                                    <Icon
-                                        icon="mdi:arrow-left"
-                                        className="h-4 w-4"
-                                    />
-                                    All products
-                                </Link>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -133,12 +104,11 @@ export default async function Mk1LitePage() {
                                 />
                             </div>
                             <h3 className="mb-3 text-2xl font-bold text-slate-900">
-                                Fast enough to win
+                                1000Hz polling rate
                             </h3>
                             <p className="mb-2 text-slate-600">
-                                1000Hz polling delivers smooth, responsive input
-                                for competitive play. Hit your patterns with
-                                confidence.
+                                Smooth, responsive input for competitive play.
+                                Hit your patterns with confidence.
                             </p>
                             <p className="text-sm font-semibold text-blue-700">
                                 1ms response time vs 5ms standard
@@ -176,9 +146,9 @@ export default async function Mk1LitePage() {
                                 Make it yours
                             </h3>
                             <p className="mb-2 text-slate-600">
-                                Open-source firmware means you&apos;re not
-                                locked in. Customize settings and tweak
-                                performance to match your style.
+                                Customize settings and tweak performance to
+                                match your style. Open-source firmware means
+                                full transparency and community control.
                             </p>
                             <p className="text-sm font-semibold text-green-700">
                                 Fully customizable
@@ -193,11 +163,8 @@ export default async function Mk1LitePage() {
                 <div className="mx-auto max-w-6xl">
                     <div className="mb-12 text-center">
                         <h2 className="mb-4 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
-                            The specs that matter
+                            Spec Summary
                         </h2>
-                        <p className="mx-auto max-w-2xl text-lg text-slate-600">
-                            Professional-grade components
-                        </p>
                     </div>
 
                     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -243,9 +210,6 @@ export default async function Mk1LitePage() {
                         <h2 className="mb-4 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
                             Lite or Pro?
                         </h2>
-                        <p className="mx-auto max-w-2xl text-lg text-slate-600">
-                            Both are excellent. Here&apos;s how they compare.
-                        </p>
                     </div>
 
                     <div className="mb-8 overflow-hidden rounded-2xl bg-white shadow-sm">
@@ -256,9 +220,9 @@ export default async function Mk1LitePage() {
                                         <th className="p-6 text-left text-sm font-semibold text-slate-900">
                                             Feature
                                         </th>
-                                        <th className="bg-gradient-to-br from-slate-50 to-blue-50 p-6 text-center text-sm font-semibold text-slate-900">
+                                        <th className="bg-gradient-to-br from-blue-100 to-blue-200 p-6 text-center text-sm font-semibold text-slate-900">
                                             Lite{" "}
-                                            <span className="text-xs font-normal text-slate-600">
+                                            <span className="text-xs font-normal text-slate-700">
                                                 (You&apos;re here)
                                             </span>
                                         </th>
@@ -272,11 +236,11 @@ export default async function Mk1LitePage() {
                                         <td className="p-6 text-sm font-medium text-slate-900">
                                             Polling Rate
                                         </td>
-                                        <td className="bg-gradient-to-br from-slate-50/30 to-blue-50/30 p-6 text-center text-sm font-semibold text-slate-900">
+                                        <td className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 text-center text-sm font-semibold text-slate-900">
                                             1000Hz
                                             <br />
-                                            <span className="text-xs font-normal text-slate-600">
-                                                Professional
+                                            <span className="text-xs font-normal text-slate-700">
+                                                Lite
                                             </span>
                                         </td>
                                         <td className="p-6 text-center text-sm text-slate-600">
@@ -291,7 +255,7 @@ export default async function Mk1LitePage() {
                                         <td className="p-6 text-sm font-medium text-slate-900">
                                             Hover Height
                                         </td>
-                                        <td className="bg-gradient-to-br from-slate-50/30 to-blue-50/30 p-6 text-center text-sm font-semibold text-slate-900">
+                                        <td className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 text-center text-sm font-semibold text-slate-900">
                                             15mm
                                         </td>
                                         <td className="p-6 text-center text-sm text-slate-600">
@@ -306,7 +270,7 @@ export default async function Mk1LitePage() {
                                         <td className="p-6 text-sm font-medium text-slate-900">
                                             Best for
                                         </td>
-                                        <td className="bg-gradient-to-br from-slate-50/30 to-blue-50/30 p-6 text-center text-sm font-semibold text-slate-900">
+                                        <td className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 text-center text-sm font-semibold text-slate-900">
                                             All serious players
                                         </td>
                                         <td className="p-6 text-center text-sm text-slate-600">
@@ -317,7 +281,7 @@ export default async function Mk1LitePage() {
                                         <td className="p-6 text-sm font-medium text-slate-900">
                                             Price
                                         </td>
-                                        <td className="bg-gradient-to-br from-slate-50/30 to-blue-50/30 p-6 text-center text-sm font-semibold text-slate-900">
+                                        <td className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 text-center text-sm font-semibold text-slate-900">
                                             $147
                                         </td>
                                         <td className="p-6 text-center text-sm font-semibold text-slate-900">
@@ -334,7 +298,7 @@ export default async function Mk1LitePage() {
                             href="/shop/mk1pro"
                             className="inline-flex items-center gap-2 rounded-full border-2 border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition-all hover:border-slate-400 hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
                         >
-                            Compare with mk.1 Pro
+                            View mk.1 Pro
                             <Icon icon="mdi:arrow-right" className="h-5 w-5" />
                         </Link>
                     </div>

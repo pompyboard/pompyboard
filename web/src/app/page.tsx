@@ -118,7 +118,7 @@ export default async function Home() {
                                 Open source
                             </h3>
                             <p className="text-slate-600">
-                                Fully customizable firmware and hardware. Built
+                                Full transparency and community control. Built
                                 by the osu! community, for the community
                             </p>
                         </div>
