@@ -1,12 +1,16 @@
 on:
   push:
+    paths:
+      - web/**
   pull_request:
+    paths:
+      - web/**
   workflow_dispatch:
 
-name: CI
+name: Web CI
 jobs:
   ci:
-    name: CI
+    name: Web CI
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -18,22 +22,6 @@ jobs:
           name: devenv
       - name: Install devenv.sh
         run: nix profile install nixpkgs#devenv
-
-      - run: cd firmware && cargo check
-        shell: devenv shell bash -- -e {0}
-
-      - run: cd firmware && cargo clippy -- -W clippy::pedantic
-        shell: devenv shell bash -- -e {0}
-
-      - run: cd firmware && cargo fmt --all -- --check
-        shell: devenv shell bash -- -e {0}
-
-      # todo: re-enable when there are stuff to test
-      # - run: cd firmware && cargo test
-      #   shell: devenv shell bash -- -e {0}
-
-      - run: cd firmware && cargo build --release
-        shell: devenv shell bash -- -e {0}
 
       - run: cd web && pnpm lint
         shell: devenv shell bash -- -e {0}

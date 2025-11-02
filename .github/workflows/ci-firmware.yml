@@ -1,0 +1,40 @@
+on:
+  push:
+    paths:
+      - firmware/**
+  pull_request:
+    paths:
+      - firmware/**
+  workflow_dispatch:
+
+name: Firmware CI
+jobs:
+  ci:
+    name: Firmware CI
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # see https://devenv.sh/integrations/github-actions/
+      - uses: cachix/install-nix-action@v26
+      - uses: cachix/cachix-action@v14
+        with:
+          name: devenv
+      - name: Install devenv.sh
+        run: nix profile install nixpkgs#devenv
+
+      - run: cd firmware && cargo check
+        shell: devenv shell bash -- -e {0}
+
+      - run: cd firmware && cargo clippy -- -W clippy::pedantic
+        shell: devenv shell bash -- -e {0}
+
+      - run: cd firmware && cargo fmt --all -- --check
+        shell: devenv shell bash -- -e {0}
+
+      # todo: re-enable when there are stuff to test
+      # - run: cd firmware && cargo test
+      #   shell: devenv shell bash -- -e {0}
+
+      - run: cd firmware && cargo build --release
+        shell: devenv shell bash -- -e {0}
