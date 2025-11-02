@@ -1,51 +1,109 @@
 "use client"
 
 import { Icon } from "@iconify/react"
-import { useState } from "react"
+import confetti from "canvas-confetti"
+import { useMutation } from "convex/react"
+import { useRef, useState } from "react"
+
+import { api } from "../../convex/_generated/api"
+import type { Id } from "../../convex/_generated/dataModel"
+
+interface MailingListFormProps {
+    variant?: "default" | "compact"
+    source?: string
+    productId?: Id<"products">
+}
 
 export default function MailingListForm({
     variant = "default",
-}: {
-    variant?: "default" | "compact"
-}) {
+    source = "homepage",
+    productId,
+}: MailingListFormProps) {
     const [email, setEmail] = useState("")
+    const [name, setName] = useState("")
+    const [honeypot, setHoneypot] = useState("")
     const [status, setStatus] = useState<
         "idle" | "loading" | "success" | "error"
     >("idle")
     const [message, setMessage] = useState("")
+    const formRenderTime = useRef<number>(Date.now())
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const joinWaitlist = useMutation(api.waitlist.joinWaitlist)
+
+    const getClientIdentifier = () => {
+        const ua = navigator.userAgent
+        const screen = `${window.screen.width}x${window.screen.height}`
+        return btoa(`${ua}-${screen}`).substring(0, 32)
+    }
+
+    const triggerConfetti = (origin: { x: number; y: number }) => {
+        confetti({
+            particleCount: 70,
+            spread: 60,
+            origin,
+            startVelocity: 60,
+            ticks: 200,
+            gravity: 1.2,
+            zIndex: 9999,
+        })
+    }
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         setStatus("loading")
 
-        // TODO: Replace with actual mailing list API endpoint
-        // For now, just simulate a successful submission
-        await new Promise((resolve) => setTimeout(resolve, 1000))
+        const formElement = e.currentTarget
+        const rect = formElement.getBoundingClientRect()
+        const confettiOrigin = {
+            x: (rect.left + rect.width / 2) / window.innerWidth,
+            y: (rect.top + rect.height / 2) / window.innerHeight,
+        }
 
         try {
-            // Placeholder for actual API call
-            // const response = await fetch('/api/subscribe', {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify({ email })
-            // })
+            const result = await joinWaitlist({
+                email: email.trim(),
+                name: name.trim() || undefined,
+                productId,
+                source,
+                referrer:
+                    typeof document !== "undefined"
+                        ? document.referrer
+                        : undefined,
+                userAgent:
+                    typeof navigator !== "undefined"
+                        ? navigator.userAgent
+                        : undefined,
+                honeypot: honeypot,
+                formRenderTime: formRenderTime.current,
+                clientIdentifier: getClientIdentifier(),
+            })
 
-            setStatus("success")
-            setMessage(
-                "Thanks! We'll keep you updated on launches and announcements.",
-            )
-            setEmail("")
+            if (result.success) {
+                setStatus("success")
+                setMessage(result.message)
+                setEmail("")
+                setName("")
 
-            // Reset after 5 seconds
-            setTimeout(() => {
-                setStatus("idle")
-                setMessage("")
-            }, 5000)
-        } catch {
+                triggerConfetti(confettiOrigin)
+
+                setTimeout(() => {
+                    setStatus("idle")
+                    setMessage("")
+                }, 5000)
+            } else {
+                setStatus("error")
+                setMessage(result.message)
+
+                setTimeout(() => {
+                    setStatus("idle")
+                    setMessage("")
+                }, 5000)
+            }
+        } catch (error) {
+            console.error("Mailing list signup error:", error)
             setStatus("error")
             setMessage("Oops! Something went wrong. Please try again.")
 
-            // Reset after 5 seconds
             setTimeout(() => {
                 setStatus("idle")
                 setMessage("")
@@ -55,11 +113,28 @@ export default function MailingListForm({
 
     if (variant === "compact") {
         return (
-            <div className="w-full max-w-md">
+            <div className="mx-auto w-full max-w-md">
                 <form
                     onSubmit={handleSubmit}
                     className="flex flex-col gap-3 sm:flex-row"
                 >
+                    <input
+                        type="text"
+                        name="website"
+                        value={honeypot}
+                        onChange={(e) => setHoneypot(e.target.value)}
+                        tabIndex={-1}
+                        autoComplete="off"
+                        style={{
+                            position: "absolute",
+                            left: "-9999px",
+                            width: "1px",
+                            height: "1px",
+                            opacity: 0,
+                        }}
+                        aria-hidden="true"
+                    />
+
                     <div className="relative flex-1">
                         <label htmlFor="email-compact" className="sr-only">
                             Email address
@@ -150,13 +225,55 @@ export default function MailingListForm({
         )
     }
 
-    // Default variant - full featured
     return (
         <div className="w-full max-w-lg">
             <form
                 onSubmit={handleSubmit}
                 className="rounded-2xl bg-white p-6 shadow-lg"
             >
+                <input
+                    type="text"
+                    name="website"
+                    value={honeypot}
+                    onChange={(e) => setHoneypot(e.target.value)}
+                    tabIndex={-1}
+                    autoComplete="off"
+                    style={{
+                        position: "absolute",
+                        left: "-9999px",
+                        width: "1px",
+                        height: "1px",
+                        opacity: 0,
+                    }}
+                    aria-hidden="true"
+                />
+
+                <div className="mb-4">
+                    <label
+                        htmlFor="name-default"
+                        className="mb-2 block text-sm font-semibold text-slate-900"
+                    >
+                        Name (optional)
+                    </label>
+                    <div className="relative">
+                        <Icon
+                            icon="mdi:account-outline"
+                            className="absolute top-1/2 left-4 h-5 w-5 -translate-y-1/2 text-slate-400"
+                        />
+                        <input
+                            id="name-default"
+                            type="text"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            placeholder="Your name"
+                            disabled={
+                                status === "loading" || status === "success"
+                            }
+                            className="w-full rounded-xl border-2 border-slate-300 bg-white py-3 pr-4 pl-12 text-slate-900 transition-all placeholder:text-slate-400 hover:border-slate-400 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 focus:outline-none disabled:cursor-not-allowed disabled:opacity-60"
+                        />
+                    </div>
+                </div>
+
                 <div className="mb-4">
                     <label
                         htmlFor="email-default"

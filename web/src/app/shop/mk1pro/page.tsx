@@ -59,7 +59,10 @@ export default async function Mk1ProPage() {
                                 <p className="mb-3 text-sm font-medium text-slate-700">
                                     Get notified when we launch
                                 </p>
-                                <MailingListForm variant="compact" />
+                                <MailingListForm
+                                    variant="compact"
+                                    source="product-mk1pro"
+                                />
                             </div>
                         </div>
 
@@ -316,7 +319,10 @@ export default async function Mk1ProPage() {
                         experience the Pro.
                     </p>
                     <div className="mb-6 flex justify-center">
-                        <MailingListForm variant="compact" />
+                        <MailingListForm
+                            variant="compact"
+                            source="product-mk1pro-cta"
+                        />
                     </div>
                     <p className="mb-8 text-sm text-slate-400">
                         Plus: Connect with osu! players in our Discord community
