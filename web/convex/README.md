@@ -1,6 +1,6 @@
 # Welcome to your Convex functions directory!
 
-Write your Convex functions here.
+Write your Convex functions here
 See https://docs.convex.dev/functions for more.
 
 A query function that takes two arguments looks like:
