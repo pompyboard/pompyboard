@@ -49,10 +49,6 @@ export default async function Home() {
                                     icon="fa-brands:discord"
                                     className="ml-2 h-5 w-5"
                                 />
-                                <Icon
-                                    icon="mdi:open-in-new"
-                                    className="ml-1 h-4 w-4"
-                                />
                             </a>
                         </div>
                     </div>
@@ -382,7 +378,6 @@ export default async function Home() {
                             icon="fa-brands:discord"
                             className="ml-2 h-5 w-5"
                         />
-                        <Icon icon="mdi:open-in-new" className="ml-1 h-4 w-4" />
                     </a>
                 </div>
             </section>
