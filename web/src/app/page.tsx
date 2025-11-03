@@ -30,7 +30,7 @@ export default async function Home() {
                         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                             <a
                                 href="#products"
-                                className="inline-flex items-center justify-center rounded-full bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-blue-600/30 transition-all hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-600/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                                className="inline-flex items-center justify-center rounded-full bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-blue-600/30 transition-all hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                             >
                                 Explore products
                                 <Icon
@@ -42,7 +42,7 @@ export default async function Home() {
                                 href="https://discord.gg/h27rwcBn73"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center rounded-full border-2 border-slate-300 bg-white px-8 py-4 text-base font-semibold text-slate-900 transition-all hover:border-slate-400 hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+                                className="inline-flex items-center justify-center rounded-full border-2 border-slate-300 bg-white px-8 py-4 text-base font-semibold text-slate-900 transition-all hover:border-slate-400 hover:bg-slate-50 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
                             >
                                 Join Discord
                                 <Icon
@@ -70,7 +70,7 @@ export default async function Home() {
                     </div>
 
                     <div className="grid gap-8 md:grid-cols-3">
-                        <div className="group rounded-2xl bg-white p-8 shadow-sm transition-all hover:shadow-xl">
+                        <div className="group rounded-2xl bg-white p-8 shadow-sm transition-all hover:shadow-lg">
                             <div className="mb-4 inline-flex rounded-xl bg-blue-100 p-3">
                                 <Icon
                                     icon="mdi:speedometer"
@@ -87,7 +87,7 @@ export default async function Home() {
                         </div>
 
                         {/* Yes, we measure in lines per millimeter. Because we're cool */}
-                        <div className="group rounded-2xl bg-white p-8 shadow-sm transition-all hover:shadow-xl">
+                        <div className="group rounded-2xl bg-white p-8 shadow-sm transition-all hover:shadow-lg">
                             <div className="mb-4 inline-flex rounded-xl bg-purple-100 p-3">
                                 <Icon
                                     icon="mdi:target"
@@ -103,7 +103,7 @@ export default async function Home() {
                             </p>
                         </div>
 
-                        <div className="group rounded-2xl bg-white p-8 shadow-sm transition-all hover:shadow-xl">
+                        <div className="group rounded-2xl bg-white p-8 shadow-sm transition-all hover:shadow-lg">
                             <div className="mb-4 inline-flex rounded-xl bg-green-100 p-3">
                                 <Icon
                                     icon="mdi:open-source-initiative"
