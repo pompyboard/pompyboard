@@ -36,7 +36,7 @@ export default function ShopItem({
     }, [])
 
     return (
-        <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-50 to-white shadow-xl transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl">
+        <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-50 to-white shadow-xl transition-all">
             <div className="relative h-72 overflow-hidden bg-gradient-to-br from-blue-50 via-purple-50 to-slate-50">
                 {isPro && (
                     <div className="absolute top-6 right-6 z-10 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-4 py-2 text-sm font-bold text-white shadow-lg backdrop-blur-sm">
