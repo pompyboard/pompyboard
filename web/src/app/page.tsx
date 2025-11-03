@@ -151,10 +151,7 @@ export default async function Home() {
                                         </span>
                                     </div>
                                     <div className="h-8 w-full overflow-hidden rounded-lg bg-slate-100">
-                                        <div
-                                            className="h-full bg-slate-400 transition-all"
-                                            style={{ width: "1.66%" }}
-                                        />
+                                        <div className="h-full w-[1.6625%] bg-slate-400 transition-all" />
                                     </div>
                                 </div>
                                 <div>
@@ -167,10 +164,7 @@ export default async function Home() {
                                         </span>
                                     </div>
                                     <div className="h-8 w-full overflow-hidden rounded-lg bg-slate-100">
-                                        <div
-                                            className="h-full bg-slate-400 transition-all"
-                                            style={{ width: "2.5%" }}
-                                        />
+                                        <div className="h-full w-[2.5%] bg-slate-400 transition-all" />
                                     </div>
                                 </div>
                                 <div>
@@ -183,10 +177,7 @@ export default async function Home() {
                                         </span>
                                     </div>
                                     <div className="h-8 w-full overflow-hidden rounded-lg bg-blue-50">
-                                        <div
-                                            className="h-full bg-gradient-to-r from-blue-500 to-blue-600 transition-all"
-                                            style={{ width: "12.5%" }}
-                                        />
+                                        <div className="h-full w-[12.5%] bg-gradient-to-r from-blue-500 to-blue-600 transition-all" />
                                     </div>
                                 </div>
                                 <div>
@@ -199,10 +190,7 @@ export default async function Home() {
                                         </span>
                                     </div>
                                     <div className="h-8 w-full overflow-hidden rounded-lg bg-purple-50">
-                                        <div
-                                            className="h-full bg-gradient-to-r from-purple-500 to-pink-500 transition-all"
-                                            style={{ width: "100%" }}
-                                        />
+                                        <div className="h-full w-[100%] bg-gradient-to-r from-purple-500 to-pink-500 transition-all" />
                                     </div>
                                 </div>
                             </div>
@@ -224,10 +212,7 @@ export default async function Home() {
                                         </span>
                                     </div>
                                     <div className="h-8 w-full overflow-hidden rounded-lg bg-slate-100">
-                                        <div
-                                            className="h-full bg-slate-400 transition-all"
-                                            style={{ width: "50%" }}
-                                        />
+                                        <div className="h-full w-[50%] bg-slate-400 transition-all" />
                                     </div>
                                 </div>
                                 <div>
@@ -240,26 +225,33 @@ export default async function Home() {
                                         </span>
                                     </div>
                                     <div className="h-8 w-full overflow-hidden rounded-lg bg-slate-100">
-                                        <div
-                                            className="h-full bg-slate-400 transition-all"
-                                            style={{ width: "100%" }}
-                                        />
+                                        <div className="h-full w-[100%] bg-slate-400 transition-all" />
                                     </div>
                                 </div>
                                 <div>
                                     <div className="mb-2 flex items-center justify-between">
                                         <span className="text-sm font-medium text-slate-700">
-                                            Pompyboard mk.1 (Both)
+                                            Pompyboard mk.1 Lite
                                         </span>
                                         <span className="text-sm font-semibold text-purple-900">
                                             200 lpmm
                                         </span>
                                     </div>
                                     <div className="h-8 w-full overflow-hidden rounded-lg bg-purple-50">
-                                        <div
-                                            className="h-full bg-gradient-to-r from-purple-500 to-pink-500 transition-all"
-                                            style={{ width: "100%" }}
-                                        />
+                                        <div className="h-full w-[100%] bg-gradient-to-r from-purple-500 to-pink-500 transition-all" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className="mb-2 flex items-center justify-between">
+                                        <span className="text-sm font-medium text-slate-700">
+                                            Pompyboard mk.1 Pro
+                                        </span>
+                                        <span className="text-sm font-semibold text-purple-900">
+                                            200 lpmm
+                                        </span>
+                                    </div>
+                                    <div className="h-8 w-full overflow-hidden rounded-lg bg-purple-50">
+                                        <div className="h-full w-[100%] bg-gradient-to-r from-purple-500 to-pink-500 transition-all" />
                                     </div>
                                 </div>
                             </div>
@@ -281,10 +273,7 @@ export default async function Home() {
                                         </span>
                                     </div>
                                     <div className="h-8 w-full overflow-hidden rounded-lg bg-slate-100">
-                                        <div
-                                            className="h-full bg-slate-400 transition-all"
-                                            style={{ width: "80%" }}
-                                        />
+                                        <div className="h-full w-[80.2222222222%] bg-slate-400 transition-all" />
                                     </div>
                                 </div>
                                 <div>
@@ -297,16 +286,29 @@ export default async function Home() {
                                         </span>
                                     </div>
                                     <div className="h-8 w-full overflow-hidden rounded-lg bg-slate-100">
+                                        <div className="h-full w-[85.4777777778%] bg-slate-400 transition-all" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className="mb-2 flex items-center justify-between">
+                                        <span className="text-sm font-medium text-slate-700">
+                                            Pompyboard mk.1 Lite
+                                        </span>
+                                        <span className="text-sm font-semibold text-purple-900">
+                                            180 × 100 mm
+                                        </span>
+                                    </div>
+                                    <div className="h-8 w-full overflow-hidden rounded-lg bg-purple-50">
                                         <div
-                                            className="h-full bg-slate-400 transition-all"
-                                            style={{ width: "85%" }}
+                                            className="h-full bg-gradient-to-r from-purple-500 to-pink-500 transition-all"
+                                            style={{ width: "100%" }}
                                         />
                                     </div>
                                 </div>
                                 <div>
                                     <div className="mb-2 flex items-center justify-between">
                                         <span className="text-sm font-medium text-slate-700">
-                                            Pompyboard mk.1 (Both)
+                                            Pompyboard mk.1 Pro
                                         </span>
                                         <span className="text-sm font-semibold text-purple-900">
                                             180 × 100 mm
