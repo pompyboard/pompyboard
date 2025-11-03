@@ -14,9 +14,8 @@ export default async function Mk1ProPage() {
     return (
         <div className="w-full">
             {/* Hero Section - Lead with emotion and value */}
-            <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-purple-50 to-slate-50 px-4 pt-16 pb-20 sm:pt-24 sm:pb-28">
+            <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-purple-50 to-slate-50 px-4 pt-8 pb-4">
                 <div className="mx-auto max-w-6xl">
-                    {/* Back to all products - top left */}
                     <div className="mb-8">
                         <Link
                             href="/#products"
@@ -64,7 +63,7 @@ export default async function Mk1ProPage() {
                         </div>
 
                         {/* Secondary actions */}
-                        <div className="flex justify-center">
+                        <div className="mt-12 flex justify-center">
                             <Link
                                 href="#specs"
                                 className="text-sm font-medium text-blue-600 underline decoration-2 underline-offset-4 transition-colors hover:text-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
