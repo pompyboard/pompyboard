@@ -91,7 +91,7 @@ export default async function Mk1LitePage() {
                     </div>
 
                     <div className="grid gap-8 lg:grid-cols-3">
-                        <div className="group rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100/50 p-8 transition-all hover:shadow-xl">
+                        <div className="group rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100/50 p-8 transition-all hover:shadow-lg">
                             <div className="mb-4 inline-flex rounded-xl bg-blue-600 p-3">
                                 <Icon
                                     icon="mdi:speedometer"
@@ -110,7 +110,7 @@ export default async function Mk1LitePage() {
                             </p>
                         </div>
 
-                        <div className="group rounded-2xl bg-gradient-to-br from-purple-50 to-purple-100/50 p-8 transition-all hover:shadow-xl">
+                        <div className="group rounded-2xl bg-gradient-to-br from-purple-50 to-purple-100/50 p-8 transition-all hover:shadow-lg">
                             <div className="mb-4 inline-flex rounded-xl bg-purple-600 p-3">
                                 <Icon
                                     icon="mdi:target-variant"
@@ -130,7 +130,7 @@ export default async function Mk1LitePage() {
                             </p>
                         </div>
 
-                        <div className="group rounded-2xl bg-gradient-to-br from-green-50 to-green-100/50 p-8 transition-all hover:shadow-xl">
+                        <div className="group rounded-2xl bg-gradient-to-br from-green-50 to-green-100/50 p-8 transition-all hover:shadow-lg">
                             <div className="mb-4 inline-flex rounded-xl bg-green-600 p-3">
                                 <Icon
                                     icon="mdi:wrench"
