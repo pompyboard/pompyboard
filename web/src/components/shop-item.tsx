@@ -80,7 +80,7 @@ export default function ShopItem({
                     </div>
                 </div>
 
-                <div className="mb-6 grid grid-cols-2 gap-3">
+                <div className="mb-6 grid grid-cols-2 gap-3 *:duration-100">
                     <div className="rounded-xl bg-gradient-to-br from-blue-50 to-blue-100/50 p-4 transition-colors hover:from-blue-100 hover:to-blue-200/50">
                         <div className="mb-1 flex items-center gap-2">
                             <Icon
@@ -144,7 +144,7 @@ export default function ShopItem({
 
                 <Link
                     href={isPro ? "/shop/mk1pro" : "/shop/mk1lite"}
-                    className="group/btn relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-full bg-slate-900 px-8 py-4 text-base font-semibold text-white shadow-lg transition-all duration-300 hover:scale-[1.02] hover:bg-slate-800 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+                    className="group/btn relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-full bg-slate-900 px-8 py-4 text-base font-semibold text-white shadow-lg transition-all duration-50 hover:scale-[1.02] hover:bg-slate-800 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
                 >
                     <span className="relative z-10">Learn more</span>
                     <Icon
@@ -152,7 +152,7 @@ export default function ShopItem({
                         className="relative z-10 h-5 w-5 transition-transform group-hover/btn:translate-x-1"
                     />
 
-                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-500 group-hover/btn:translate-x-full" />
+                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-150 group-hover/btn:translate-x-full" />
                 </Link>
             </div>
         </div>
