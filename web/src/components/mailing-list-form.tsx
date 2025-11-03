@@ -73,7 +73,7 @@ export default function MailingListForm({
                     typeof navigator !== "undefined"
                         ? navigator.userAgent
                         : undefined,
-                honeypot: honeypot,
+                honeypot,
                 formRenderTime: formRenderTime.current,
                 clientIdentifier: getClientIdentifier(),
             })
