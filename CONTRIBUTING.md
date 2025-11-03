@@ -22,6 +22,14 @@ The pompyboard project can be roughly broken down into 5 parts:
 2. Open `README.md` file of the sub-project you want to work on
    (e.g. [`./firmware/README.md`](./firmware/README.md)) and go from there.
 
+## Branch structure
+
+- There are three major branches:
+  - `dev` - open Pull Requests here
+  - `staging` - testing before production
+  - `master` - production
+- For OpenTabletDriver, follow their [`CONTRIBUTING.md`][otd-contrib].
+
 ## Contribution standards
 
 ### Communication, communication, communication
@@ -34,8 +42,8 @@ down. Just be clear about it.
 ### Formatting
 
 It is expected that all text-based files are formatted using the correct
-formatter before getting committed. See
-[`./.vscode/settings.json`](./.vscode/settings.json) for more info.
+formatter. See [`./.vscode/settings.json`](./.vscode/settings.json) for more
+info.
 
 ### line length
 
@@ -45,9 +53,10 @@ know when you are over that limit.
 
 ### Commit
 
-Be specific and concise. Prepend scope if necessary.
+Size of the commit should be reviewable and ideally be atomic.
 
-Examples:
+Commit messages must be specific and concise. Prepend scope if necessary.\
+For example:
 
 - `remove unused files`
 - `firmware: add more test cases for functionName`
@@ -56,3 +65,4 @@ Examples:
 <!-- Links -->
 
 [otd-fork]: https://github.com/pompyboard/OpenTabletDriver
+[otd-contrib]: https://github.com/OpenTabletDriver/OpenTabletDriver/blob/master/CONTRIBUTING.md
