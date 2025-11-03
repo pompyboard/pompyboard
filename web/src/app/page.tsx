@@ -1,30 +1,24 @@
 import ShopItem from "@/components/shop-item"
 import { Icon } from "@iconify/react"
+import Link from "next/link"
 
 export default async function Home() {
     return (
         <div className="w-full">
             <section className="relative overflow-hidden px-4 pt-16 pb-24 sm:pt-24 sm:pb-32">
                 <div className="mx-auto max-w-6xl">
-                    <div className="animate-fade-in mb-8 flex justify-center">
-                        <div className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700 ring-1 ring-slate-200 transition-all hover:ring-slate-300">
-                            <span>Made for osu! players</span>
-                        </div>
-                    </div>
-
                     <div
                         className="animate-fade-in text-center"
                         style={{ animationDelay: "0.1s" }}
                     >
                         <h1 className="mb-6 text-5xl font-bold tracking-tight text-slate-900 sm:text-6xl md:text-7xl lg:text-8xl">
-                            Dominate osu! with
+                            this one&apos;s made for
                             <br />
-                            <span className="gradient-text">precision</span>
+                            <span className="gradient-text">You</span>
                         </h1>
                         <p className="mx-auto mb-12 max-w-2xl text-lg text-slate-600 sm:text-xl md:text-2xl">
-                            The world&apos;s most advanced open-source tablet
-                            designed specifically for osu! players. Experience
-                            unmatched speed, accuracy, and control.
+                            Pompyboard is the first and only tablet made
+                            specifically for osu! players.
                         </p>
 
                         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -44,7 +38,7 @@ export default async function Home() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center rounded-full border-2 border-slate-300 bg-white px-8 py-4 text-base font-semibold text-slate-900 transition-all hover:border-slate-400 hover:bg-slate-50 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
                             >
-                                Join Discord
+                                Join our Community
                                 <Icon
                                     icon="fa-brands:discord"
                                     className="ml-2 h-5 w-5"
@@ -61,12 +55,8 @@ export default async function Home() {
                 <div className="mx-auto max-w-6xl">
                     <div className="mb-16 text-center">
                         <h2 className="mb-4 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
-                            Engineered for osu! dominance
+                            How we&apos;re different
                         </h2>
-                        <p className="mx-auto max-w-2xl text-lg text-slate-600">
-                            Every feature optimized for competitive rhythm
-                            gaming
-                        </p>
                     </div>
 
                     <div className="grid gap-8 md:grid-cols-3">
@@ -78,28 +68,30 @@ export default async function Home() {
                                 />
                             </div>
                             <h3 className="mb-2 text-xl font-semibold text-slate-900">
-                                Lightning-fast 8000Hz
+                                We&apos;re fast
                             </h3>
                             <p className="text-slate-600">
-                                Ultra-low latency polling for instant response.
-                                Hit every jump and stream with perfect timing
+                                With polling as high as 8000Hz and everything
+                                being built with latency in mind, your osu!
+                                gameplay will feel smoother than ever.
                             </p>
                         </div>
 
                         {/* Yes, we measure in lines per millimeter. Because we're cool */}
                         <div className="group rounded-2xl bg-white p-8 shadow-sm transition-all hover:shadow-lg">
-                            <div className="mb-4 inline-flex rounded-xl bg-purple-100 p-3">
+                            <div className="mb-4 inline-flex rounded-xl bg-yellow-100 p-3">
                                 <Icon
-                                    icon="mdi:target"
-                                    className="h-8 w-8 text-purple-600"
+                                    icon="mdi:attach-money"
+                                    className="h-8 w-8 text-yellow-600"
                                 />
                             </div>
                             <h3 className="mb-2 text-xl font-semibold text-slate-900">
-                                Pixel-perfect aim
+                                We&apos;re cheap
                             </h3>
                             <p className="text-slate-600">
-                                200 lpmm resolution for surgical precision on
-                                even the trickiest patterns and jumps
+                                We want to be everyone&apos;s first and only
+                                gaming tablet so we made sure the price is
+                                affordable to as many people as possible.
                             </p>
                         </div>
 
@@ -111,11 +103,22 @@ export default async function Home() {
                                 />
                             </div>
                             <h3 className="mb-2 text-xl font-semibold text-slate-900">
-                                Open source
+                                We&lsquo;re Open
                             </h3>
                             <p className="text-slate-600">
-                                Full transparency and community control. Built
-                                by the osu! community, for the community
+                                Everything we build - the hardware, software,
+                                even this very website is available on{" "}
+                                <Link
+                                    title="View source code on GitHub"
+                                    href="https://github.com/pompyboard/pompyboard"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1 font-semibold text-slate-900 underline decoration-slate-300 decoration-2 underline-offset-2 transition-colors hover:text-blue-600 hover:decoration-blue-600 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
+                                    aria-label="GitHub"
+                                >
+                                    Github
+                                </Link>
+                                .
                             </p>
                         </div>
                     </div>
@@ -127,11 +130,8 @@ export default async function Home() {
                 <div className="mx-auto max-w-6xl">
                     <div className="mb-16 text-center">
                         <h2 className="mb-4 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
-                            How we compare
+                            How we&apos;re better
                         </h2>
-                        <p className="mx-auto max-w-2xl text-lg text-slate-600">
-                            Pompyboard vs popular alternatives
-                        </p>
                     </div>
 
                     <div className="mx-auto max-w-4xl space-y-12">
@@ -333,10 +333,6 @@ export default async function Home() {
                         <h2 className="mb-4 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
                             Choose your weapon
                         </h2>
-                        <p className="mx-auto max-w-2xl text-lg text-slate-600">
-                            Professional-grade tablets built for competitive
-                            osu! play
-                        </p>
                     </div>
 
                     <div className="grid gap-8 lg:grid-cols-2">
@@ -363,11 +359,11 @@ export default async function Home() {
             <section className="bg-slate-900 px-4 py-20">
                 <div className="mx-auto max-w-4xl text-center">
                     <h2 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-                        Join the osu! tablet community
+                        Join our community
                     </h2>
                     <p className="mb-8 text-lg text-slate-300">
-                        Connect with top players, share your plays, and get
-                        early access to new products
+                        Connect with players / get the latest news / contribute
+                        to the project
                     </p>
                     <a
                         href="https://discord.gg/h27rwcBn73"
@@ -375,7 +371,7 @@ export default async function Home() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center rounded-full bg-[#5865F2] px-8 py-4 text-base font-semibold text-white shadow-lg transition-all hover:bg-[#4752C4] hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5865F2]"
                     >
-                        Join our Discord
+                        Join our Community
                         <Icon
                             icon="fa-brands:discord"
                             className="ml-2 h-5 w-5"
