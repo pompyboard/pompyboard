@@ -36,7 +36,7 @@ export default function ShopItem({
     }, [])
 
     return (
-        <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-50 to-white shadow-xl transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl">
+        <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-50 to-white shadow-xl transition-all">
             <div className="relative h-72 overflow-hidden bg-gradient-to-br from-blue-50 via-purple-50 to-slate-50">
                 {isPro && (
                     <div className="absolute top-6 right-6 z-10 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-4 py-2 text-sm font-bold text-white shadow-lg backdrop-blur-sm">
@@ -80,7 +80,7 @@ export default function ShopItem({
                     </div>
                 </div>
 
-                <div className="mb-6 grid grid-cols-2 gap-3">
+                <div className="mb-6 grid grid-cols-2 gap-3 *:duration-100">
                     <div className="rounded-xl bg-gradient-to-br from-blue-50 to-blue-100/50 p-4 transition-colors hover:from-blue-100 hover:to-blue-200/50">
                         <div className="mb-1 flex items-center gap-2">
                             <Icon
@@ -144,7 +144,7 @@ export default function ShopItem({
 
                 <Link
                     href={isPro ? "/shop/mk1pro" : "/shop/mk1lite"}
-                    className="group/btn relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-full bg-slate-900 px-8 py-4 text-base font-semibold text-white shadow-lg transition-all duration-300 hover:scale-[1.02] hover:bg-slate-800 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+                    className="group/btn relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-full bg-slate-900 px-8 py-4 text-base font-semibold text-white shadow-lg transition-all duration-50 hover:scale-[1.02] hover:bg-slate-800 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
                 >
                     <span className="relative z-10">Learn more</span>
                     <Icon

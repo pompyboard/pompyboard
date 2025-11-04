@@ -32,7 +32,13 @@ export default function Navbar() {
                 {/* Desktop Navigation */}
                 <div className="hidden items-center gap-6 md:flex">
                     <Link
-                        href="#products"
+                        href="/"
+                        className="text-sm font-medium text-slate-700 transition-colors hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
+                    >
+                        Home
+                    </Link>
+                    <Link
+                        href="/#products"
                         className="text-sm font-medium text-slate-700 transition-colors hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
                     >
                         Products
@@ -73,7 +79,14 @@ export default function Navbar() {
                 <div className="border-t border-slate-200/80 bg-white/95 backdrop-blur-xl md:hidden">
                     <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-4">
                         <Link
-                            href="#products"
+                            href="/"
+                            onClick={() => setIsMenuOpen(false)}
+                            className="py-2 text-sm font-medium text-slate-700 transition-colors hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
+                        >
+                            Home
+                        </Link>
+                        <Link
+                            href="/#products"
                             onClick={() => setIsMenuOpen(false)}
                             className="py-2 text-sm font-medium text-slate-700 transition-colors hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
                         >
