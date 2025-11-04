@@ -15,19 +15,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # see https://devenv.sh/integrations/github-actions/
-      - uses: cachix/install-nix-action@v26
-      - uses: cachix/cachix-action@v14
+      # https://github.com/pnpm/action-setup
+      - uses: pnpm/action-setup@v4
         with:
-          name: devenv
-      - name: Install devenv.sh
-        run: nix profile install nixpkgs#devenv
+          version: 10.13.1 # synced with devenv
+
+      # https://github.com/actions/setup-node
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.4.1 # synced with devenv
+          cache: pnpm
+
+      - run: cd web && pnpm install
 
       - run: cd web && pnpm lint
-        shell: devenv shell bash -- -e {0}
 
       - run: cd web && pnpm build
-        shell: devenv shell bash -- -e {0}
 
       - run: cd web && pnpm prettier -l .
-        shell: devenv shell bash -- -e {0}
