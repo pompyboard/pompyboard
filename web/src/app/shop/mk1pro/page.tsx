@@ -18,6 +18,7 @@ export default async function Mk1ProPage() {
                 <div className="mx-auto max-w-6xl">
                     <div className="mb-8">
                         <Link
+                            aria-label="Back to products"
                             href="/#products"
                             className="inline-flex items-center gap-2 text-sm text-slate-600 transition-colors hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
                         >
