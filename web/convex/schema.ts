@@ -19,14 +19,14 @@ export default defineSchema({
      */
     products: defineTable({
         // Basic product info
-        name: v.string(), // "PompyBoard mk.1 Pro"
-        slug: v.string(), // "mk1pro" - URL-friendly identifier
-        description: v.string(), // Marketing description
-        shortDescription: v.optional(v.string()), // For cards/lists
+        name: v.string(),
+        slug: v.string(), // URL-friendly identifier
+        description: v.string(),
+        shortDescription: v.optional(v.string()),
 
         // Pricing
-        priceUSD: v.number(), // Price in USD cents (e.g., 24727 = $247.27)
-        currency: v.string(), // "USD"
+        priceUSD: v.number(), // Price in USD cents
+        currency: v.string(),
         compareAtPriceUSD: v.optional(v.number()), // Original price if on sale
 
         // Product status
@@ -40,12 +40,12 @@ export default defineSchema({
         ),
 
         // Launch information
-        estimatedLaunchDate: v.optional(v.number()), // Unix timestamp
-        announcementDate: v.optional(v.number()), // When it was announced
+        estimatedLaunchDate: v.optional(v.number()),
+        announcementDate: v.optional(v.number()),
 
         // Product categorization
-        productType: v.string(), // "tablet", "accessory", "bundle"
-        tags: v.array(v.string()), // ["pro", "high-polling-rate", "osu"]
+        productType: v.string(),
+        tags: v.array(v.string()),
 
         // SEO & metadata
         metaTitle: v.optional(v.string()),
@@ -73,16 +73,16 @@ export default defineSchema({
         productId: v.id("products"),
 
         // Technical specs
-        pollingRate: v.string(), // "8000 Hz"
-        activeArea: v.string(), // "180 × 100 mm"
-        resolution: v.string(), // "200 lpmm"
-        hoverHeight: v.string(), // "20 mm"
+        pollingRate: v.string(),
+        activeArea: v.string(),
+        resolution: v.string(),
+        hoverHeight: v.string(),
 
         // Additional specs (flexible)
         weight: v.optional(v.string()),
         dimensions: v.optional(v.string()),
         cableLength: v.optional(v.string()),
-        compatibility: v.optional(v.array(v.string())), // ["Windows", "macOS", "Linux"]
+        compatibility: v.optional(v.array(v.string())),
 
         // Detailed technical data
         additionalSpecs: v.optional(v.record(v.string(), v.string())), // Flexible key-value pairs
@@ -205,10 +205,10 @@ export default defineSchema({
 
         // Product interest
         productId: v.optional(v.id("products")), // Specific product or general interest
-        productType: v.optional(v.string()), // "tablet", "all"
+        productType: v.optional(v.string()),
 
         // Source tracking
-        source: v.string(), // "homepage", "discord", "reddit", "twitter"
+        source: v.string(),
         referrer: v.optional(v.string()), // UTM or referral code
         campaign: v.optional(v.string()), // Marketing campaign
 
@@ -273,7 +273,7 @@ export default defineSchema({
         shippingCostUSD: v.number(),
         taxUSD: v.number(),
         totalUSD: v.number(),
-        currency: v.string(), // "USD"
+        currency: v.string(),
 
         // Order type
         orderType: v.union(v.literal("pre_order"), v.literal("standard")),
@@ -304,11 +304,11 @@ export default defineSchema({
         // Shipping info
         shippingAddressId: v.id("shippingAddresses"),
         trackingNumber: v.optional(v.string()),
-        carrier: v.optional(v.string()), // "USPS", "FedEx", etc.
+        carrier: v.optional(v.string()),
 
         // Payment info
         paymentIntentId: v.optional(v.string()), // Stripe payment intent
-        paymentMethod: v.optional(v.string()), // "card", "paypal", etc.
+        paymentMethod: v.optional(v.string()),
 
         // Notes
         customerNotes: v.optional(v.string()),
@@ -375,7 +375,7 @@ export default defineSchema({
 
         // Address metadata
         isDefault: v.boolean(),
-        label: v.optional(v.string()), // "Home", "Work", etc.
+        label: v.optional(v.string()),
 
         // Validation
         validated: v.boolean(), // Address verified via API
@@ -394,7 +394,7 @@ export default defineSchema({
     faqs: defineTable({
         question: v.string(),
         answer: v.string(), // Supports markdown
-        category: v.string(), // "product", "shipping", "payment", "technical"
+        category: v.string(),
 
         // Display
         displayOrder: v.number(),
@@ -434,7 +434,7 @@ export default defineSchema({
         ),
 
         // Categorization
-        category: v.string(), // "announcement", "update", "tutorial", "news"
+        category: v.string(),
         tags: v.array(v.string()),
 
         // Publishing
@@ -461,16 +461,16 @@ export default defineSchema({
      * Product comparisons (e.g., vs Wacom tablets)
      */
     comparisons: defineTable({
-        title: v.string(), // "PompyBoard vs Wacom CTL-472"
-        productId: v.id("products"), // PompyBoard product
-        competitorName: v.string(), // "Wacom CTL-472"
+        title: v.string(),
+        productId: v.id("products"),
+        competitorName: v.string(),
 
         // Comparison data
         features: v.array(
             v.object({
-                feature: v.string(), // "Polling Rate"
-                pompyValue: v.string(), // "8000 Hz"
-                competitorValue: v.string(), // "133 Hz"
+                feature: v.string(),
+                pompyValue: v.string(),
+                competitorValue: v.string(),
                 winner: v.union(
                     v.literal("pompy"),
                     v.literal("competitor"),
