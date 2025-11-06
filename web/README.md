@@ -1,83 +1,36 @@
-# PompyBoard Website
+# PompyBoard website
 
-A production-ready e-commerce platform for PompyBoard built with Next.js 15 and Convex.
+Website for PompyBoard built with Next.js 15 and Convex.
 
 ## Tech Stack
 
-- **Framework**: Next.js 15 (App Router)
-- **Database**: Convex (real-time, serverless)
-- **Authentication**: Convex Auth
-- **Styling**: Tailwind CSS 4
-- **3D Graphics**: Three.js, React Three Fiber
-- **Language**: TypeScript
+- Next.js 15 (App Router)
+- Convex (backend & database)
+- Tailwind CSS 4
+- TypeScript
 
-## Quick Start
+## Setup
 
-```bash
-# Install dependencies
-pnpm install
+1. [Setup devenv](https://devenv.sh/getting-started)
+2. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+3. Create `.env.local` from `.env.local.example`
+4. Start Convex (first time will prompt for login):
+   ```bash
+   pnpx convex dev
+   ```
+5. Seed the database:
+   ```bash
+   pnpx convex run seed:seedProducts
+   ```
+6. Start dev server:
+   ```bash
+   pnpm dev
+   ```
 
-# Start Convex dev server (first time - will prompt for login)
-npx convex dev
+## Must read
 
-# In another terminal, seed the database
-npx convex run seed:seedProducts
-
-# Start Next.js dev server
-pnpm dev
-```
-
-Visit http://localhost:3000
-
-## Database Schema
-
-Production-ready schema with 17 tables including:
-
-- Products & inventory management
-- Waitlist & pre-orders
-- Orders & payments
-- Content management (FAQs, blog posts)
-- Analytics & tracking
-
-## Key Features
-
-✅ Real-time product catalog  
-✅ Waitlist management with Discord integration  
-✅ Pre-order system for 2026 launch  
-✅ Content management (FAQs, blog, comparisons)  
-✅ Production-ready with proper indexes  
-✅ Full TypeScript support
-
-## Available Convex Functions
-
-### Products
-
-- `listProducts`, `getProductBySlug`, `getProductImages`
-- `getFeaturedProducts`, `getProductInventory`
-
-### Waitlist
-
-- `joinWaitlist`, `unsubscribeWaitlist`
-- `getWaitlistCount`, `checkWaitlistStatus`
-
-### Content
-
-- `listFaqs`, `getFaqBySlug`, `getFaqCategories`
-- `listBlogPosts`, `getBlogPostBySlug`
-- `getProductComparisons`
-
-## Deployment
-
-```bash
-# Deploy Convex backend
-npx convex deploy
-
-# Deploy Next.js (Vercel, Netlify, etc.)
-vercel deploy
-```
-
-## Documentation
-
-- [Convex Docs](https://docs.convex.dev)
-- [Next.js Docs](https://nextjs.org/docs)
-- [Project Discord](https://discord.gg/h27rwcBn73)
+- https://nextjs.org/docs
+- https://docs.convex.dev

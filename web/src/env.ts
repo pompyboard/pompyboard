@@ -4,11 +4,12 @@ import { z } from "zod"
 
 export const env = createEnv({
     server: {
-        AUTH_OSU_ID: z.string(),
-        AUTH_OSU_SECRET: z.string(),
-        AUTH_SECRET: z.string(),
-        DATABASE_URL: z.string(),
+        CONVEX_SITE_URL: z.string().url(),
     },
-    client: {},
-    experimental__runtimeEnv: {},
+    client: {
+        NEXT_PUBLIC_CONVEX_URL: z.string().url(),
+    },
+    experimental__runtimeEnv: {
+        NEXT_PUBLIC_CONVEX_URL: process.env.NEXT_PUBLIC_CONVEX_URL,
+    },
 })
