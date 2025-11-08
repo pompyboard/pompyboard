@@ -44,12 +44,6 @@ export default function Navbar() {
                         Products
                     </Link>
                     <Link
-                        href="/technology"
-                        className="text-sm font-medium text-slate-700 transition-colors hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
-                    >
-                        Technology
-                    </Link>
-                    <Link
                         href="https://discord.gg/h27rwcBn73"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -91,13 +85,6 @@ export default function Navbar() {
                             className="py-2 text-sm font-medium text-slate-700 transition-colors hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
                         >
                             Products
-                        </Link>
-                        <Link
-                            href="/technology"
-                            onClick={() => setIsMenuOpen(false)}
-                            className="py-2 text-sm font-medium text-slate-700 transition-colors hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
-                        >
-                            Technology
                         </Link>
                         <Link
                             href="https://discord.gg/h27rwcBn73"
