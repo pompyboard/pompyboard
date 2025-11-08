@@ -96,6 +96,7 @@
     "pclk",
     "Phong",
     "pkgs",
+    "pnpx",
     "pompy",
     "pompyboard",
     "pompydev",
@@ -113,6 +114,7 @@
     "Tlink",
     "trivago",
     "usbd",
+    "waitlist",
     "wooting"
   ]
 }
