@@ -1,7 +1,3 @@
-/**
- * Seed data for PompyBoard products
- * Run this once to populate initial product data
- */
 import { v } from "convex/values"
 
 import { internalMutation } from "./_generated/server"
