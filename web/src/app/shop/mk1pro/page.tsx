@@ -61,7 +61,7 @@ export default async function Mk1ProPage() {
                                 </p>
                                 <MailingListForm
                                     variant="compact"
-                                    source="product-mk1pro"
+                                    source="product-tablet-mk1-pro"
                                 />
                             </div>
                         </div>
@@ -321,7 +321,7 @@ export default async function Mk1ProPage() {
                     <div className="mb-6 flex justify-center">
                         <MailingListForm
                             variant="compact"
-                            source="product-mk1pro-cta"
+                            source="product-tablet-mk1-pro-cta"
                         />
                     </div>
                     <p className="mb-8 text-sm text-slate-400">

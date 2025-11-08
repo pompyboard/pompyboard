@@ -10,13 +10,20 @@ import type { Id } from "../../convex/_generated/dataModel"
 
 interface MailingListFormProps {
     variant?: "default" | "compact"
-    source?: string
+    source:
+        | "homepage"
+        | "product-tablet-mk1-lite"
+        | "product-tablet-mk1-lite-cta"
+        | "product-tablet-mk1-pro"
+        | "product-tablet-mk1-pro-cta"
+        | "product-tablet-mk1-x"
+        | "product-tablet-mk1-x-cta"
     productId?: Id<"products">
 }
 
 export default function MailingListForm({
     variant = "default",
-    source = "homepage",
+    source,
     productId,
 }: MailingListFormProps) {
     const [email, setEmail] = useState("")

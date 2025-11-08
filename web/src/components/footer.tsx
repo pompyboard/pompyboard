@@ -1,25 +1,10 @@
 import { Icon } from "@iconify/react"
 import Link from "next/link"
 
-import MailingListForm from "./mailing-list-form"
-
 export default function Footer() {
     return (
         <footer className="border-t border-slate-200 bg-slate-50 px-4 py-12">
             <div className="mx-auto max-w-6xl">
-                <section className="mb-12 border-b border-slate-200 pb-12">
-                    <div className="mx-auto max-w-2xl text-center">
-                        <h3 className="mb-2 text-2xl font-bold text-slate-900">
-                            Stay Updated
-                        </h3>
-                        <p className="mb-6 text-slate-600">
-                            Get notified about product launches, updates, and
-                            exclusive offers.
-                        </p>
-                        <MailingListForm variant="compact" source="footer" />
-                    </div>
-                </section>
-
                 <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
                     {/* Brand and Attribution */}
                     <div className="text-center md:text-left">

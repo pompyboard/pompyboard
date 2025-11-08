@@ -1,3 +1,4 @@
+import MailingListForm from "@/components/mailing-list-form"
 import ShopItem from "@/components/shop-item"
 import { Icon } from "@iconify/react"
 import Link from "next/link"
@@ -377,6 +378,19 @@ export default async function Home() {
                             className="ml-2 h-5 w-5"
                         />
                     </a>
+                </div>
+            </section>
+
+            <section className="mt-12 mb-16 border-slate-200">
+                <div className="mx-auto max-w-2xl text-center">
+                    <h3 className="mb-2 text-2xl font-bold text-slate-900">
+                        Stay Updated
+                    </h3>
+                    <p className="mb-6 text-slate-600">
+                        Get notified about product launches, updates, and
+                        exclusive offers.
+                    </p>
+                    <MailingListForm variant="compact" source="homepage" />
                 </div>
             </section>
         </div>

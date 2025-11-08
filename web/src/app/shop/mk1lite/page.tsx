@@ -61,7 +61,7 @@ export default async function Mk1LitePage() {
                                 </p>
                                 <MailingListForm
                                     variant="compact"
-                                    source="product-mk1lite"
+                                    source="product-tablet-mk1-lite"
                                 />
                             </div>
                         </div>
@@ -320,7 +320,7 @@ export default async function Mk1LitePage() {
                     <div className="mb-6 flex justify-center">
                         <MailingListForm
                             variant="compact"
-                            source="product-mk1lite-cta"
+                            source="product-tablet-mk1-lite-cta"
                         />
                     </div>
                     <p className="mb-8 text-sm text-slate-400">
