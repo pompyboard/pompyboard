@@ -39,7 +39,7 @@ jobs:
           AUTH_SECRET="some random text"
 
           CONVEX_DEPLOYMENT="some random text"
-          NEXT_PUBLIC_CONVEX_URL="some random text"
+          NEXT_PUBLIC_CONVEX_URL="https://some.random.url"
 
           STRIPE_SECRET_KEY="some random text"
           NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY="some random text"
