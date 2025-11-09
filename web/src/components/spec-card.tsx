@@ -52,7 +52,7 @@ export default function SpecCard({
         <>
             <button
                 onClick={() => setIsOpen(true)}
-                className="group relative w-full rounded-2xl bg-white p-6 text-left shadow-sm transition-all hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                className="group relative w-full rounded-2xl bg-white p-6 text-left shadow-sm transition-all hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                 aria-label={`Learn more about ${label}`}
             >
                 <div className="absolute top-4 right-4 opacity-0 transition-opacity group-hover:opacity-100">
@@ -89,7 +89,7 @@ export default function SpecCard({
                     >
                         <button
                             onClick={() => setIsOpen(false)}
-                            className="absolute top-4 right-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 backdrop-blur-sm transition-all hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+                            className="absolute top-4 right-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 backdrop-blur-sm transition-all hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
                             aria-label="Close dialog"
                         >
                             <Icon

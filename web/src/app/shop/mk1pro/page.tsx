@@ -13,12 +13,12 @@ export default async function Mk1ProPage() {
     return (
         <div className="w-full">
             {/* Hero Section - Lead with emotion and value */}
-            <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-purple-50 to-slate-50 px-4 pt-16 pb-20 sm:pt-24 sm:pb-28">
+            <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-purple-50 to-slate-50 px-4 pt-8 pb-4">
                 <div className="mx-auto max-w-6xl">
-                    {/* Back to all products - top left */}
                     <div className="mb-8">
                         <Link
-                            href="/"
+                            aria-label="Back to products"
+                            href="/#products"
                             className="inline-flex items-center gap-2 text-sm text-slate-600 transition-colors hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
                         >
                             <Icon icon="mdi:arrow-left" className="h-4 w-4" />
@@ -72,7 +72,7 @@ export default async function Mk1ProPage() {
                         */}
 
                         {/* Secondary actions */}
-                        <div className="flex justify-center">
+                        <div className="mt-12 flex justify-center">
                             <Link
                                 href="#specs"
                                 className="text-sm font-medium text-blue-600 underline decoration-2 underline-offset-4 transition-colors hover:text-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
@@ -100,7 +100,7 @@ export default async function Mk1ProPage() {
 
                     <div className="grid gap-8 lg:grid-cols-3">
                         {/* Leading with user benefits */}
-                        <div className="group rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100/50 p-8 transition-all hover:shadow-xl">
+                        <div className="group rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100/50 p-8 transition-all hover:shadow-lg">
                             <div className="mb-4 inline-flex rounded-xl bg-blue-600 p-3">
                                 <Icon
                                     icon="mdi:lightning-bolt"
@@ -120,7 +120,7 @@ export default async function Mk1ProPage() {
                             </p>
                         </div>
 
-                        <div className="group rounded-2xl bg-gradient-to-br from-purple-50 to-purple-100/50 p-8 transition-all hover:shadow-xl">
+                        <div className="group rounded-2xl bg-gradient-to-br from-purple-50 to-purple-100/50 p-8 transition-all hover:shadow-lg">
                             <div className="mb-4 inline-flex rounded-xl bg-purple-600 p-3">
                                 <Icon
                                     icon="mdi:target-variant"
@@ -139,7 +139,7 @@ export default async function Mk1ProPage() {
                             </p>
                         </div>
 
-                        <div className="group rounded-2xl bg-gradient-to-br from-green-50 to-green-100/50 p-8 transition-all hover:shadow-xl">
+                        <div className="group rounded-2xl bg-gradient-to-br from-green-50 to-green-100/50 p-8 transition-all hover:shadow-lg">
                             <div className="mb-4 inline-flex rounded-xl bg-green-600 p-3">
                                 <Icon
                                     icon="mdi:tune-vertical"

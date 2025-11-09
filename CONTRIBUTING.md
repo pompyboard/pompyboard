@@ -32,6 +32,14 @@ The pompyboard project can be roughly broken down into 5 parts:
 
 ## Contribution standards
 
+### AI
+
+- ✅ Using AI to write code
+- ✅ Using AI to help you understand the code
+- ❌ Using AI to write text
+  - This applies to, but not limited to code comments, HTML contents,
+    documentations, commit messages, and Pull request descriptions.
+
 ### Communication, communication, communication
 
 Remember, people can't read your mind. If you did something amazing and you want
