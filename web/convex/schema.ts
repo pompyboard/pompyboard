@@ -57,20 +57,4 @@ export default defineSchema({
         .index("by_product_id", ["productId"])
         .index("by_source", ["source"])
         .index("by_discord_id", ["discordId"]),
-
-    // =========================================================================
-    // ETC
-    // =========================================================================
-
-    rateLimits: defineTable({
-        identifier: v.string(),
-        action: v.string(),
-        attempts: v.number(),
-        windowStart: v.number(),
-        blockedUntil: v.optional(v.number()),
-        lastAttempt: v.number(),
-    })
-        .index("by_identifier_and_action", ["identifier", "action"])
-        .index("by_blocked_until", ["blockedUntil"])
-        .index("by_window_start", ["windowStart"]),
 })

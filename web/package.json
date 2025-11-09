@@ -12,6 +12,7 @@
     },
     "dependencies": {
         "@convex-dev/auth": "^0.0.90",
+        "@convex-dev/rate-limiter": "^0.2.14",
         "@react-three/drei": "^10.7.4",
         "@react-three/fiber": "^9.3.0",
         "@t3-oss/env-nextjs": "^0.13.8",

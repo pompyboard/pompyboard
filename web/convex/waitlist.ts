@@ -1,85 +1,25 @@
+import {
+    HOUR,
+    type RateLimitConfig,
+    RateLimiter,
+} from "@convex-dev/rate-limiter"
 import { v } from "convex/values"
 
-import { MutationCtx, mutation, query } from "./_generated/server"
+import { components } from "./_generated/api"
+import { mutation, query } from "./_generated/server"
 
-const RATE_LIMIT_CONFIG = {
-    maxAttempts: 5,
-    windowMinutes: 60,
-    blockDurationMinutes: 60,
-}
+const rateLimiter = new RateLimiter(components.rateLimiter, {
+    joinWaitlist: {
+        kind: "token bucket",
+        rate: 60,
+        period: HOUR,
+        capacity: 5,
+    },
+} satisfies Record<string, RateLimitConfig>)
 
-async function checkRateLimit(
-    ctx: MutationCtx,
-    identifier: string,
-    action: string,
-): Promise<{ allowed: boolean; message?: string; waitMinutes?: number }> {
-    const now = Date.now()
-    const windowStart = now - RATE_LIMIT_CONFIG.windowMinutes * 60 * 1000
-
-    const rateLimit = await ctx.db
-        .query("rateLimits")
-        .withIndex("by_identifier_and_action", (q) =>
-            q.eq("identifier", identifier).eq("action", action),
-        )
-        .first()
-
-    if (rateLimit?.blockedUntil && rateLimit.blockedUntil > now) {
-        const waitMinutes = Math.ceil((rateLimit.blockedUntil - now) / 60000)
-        return {
-            allowed: false,
-            message: `Too many attempts. Please try again in ${waitMinutes} minutes.`,
-            waitMinutes,
-        }
-    }
-
-    if (!rateLimit || rateLimit.windowStart < windowStart) {
-        if (rateLimit) {
-            await ctx.db.patch(rateLimit._id, {
-                attempts: 1,
-                windowStart: now,
-                lastAttempt: now,
-                blockedUntil: undefined,
-            })
-        } else {
-            await ctx.db.insert("rateLimits", {
-                identifier,
-                action,
-                attempts: 1,
-                windowStart: now,
-                lastAttempt: now,
-            })
-        }
-        return { allowed: true }
-    }
-
-    const newAttempts = rateLimit.attempts + 1
-
-    if (newAttempts > RATE_LIMIT_CONFIG.maxAttempts) {
-        const blockedUntil =
-            now + RATE_LIMIT_CONFIG.blockDurationMinutes * 60 * 1000
-        await ctx.db.patch(rateLimit._id, {
-            attempts: newAttempts,
-            lastAttempt: now,
-            blockedUntil,
-        })
-        return {
-            allowed: false,
-            message: `Too many signup attempts. Please try again in ${RATE_LIMIT_CONFIG.blockDurationMinutes} minutes.`,
-            waitMinutes: RATE_LIMIT_CONFIG.blockDurationMinutes,
-        }
-    }
-
-    await ctx.db.patch(rateLimit._id, {
-        attempts: newAttempts,
-        lastAttempt: now,
-    })
-
-    return { allowed: true }
-}
-
-// ============================================================================
+// =============================================================================
 // PUBLIC MUTATIONS
-// ============================================================================
+// =============================================================================
 
 export const joinWaitlist = mutation({
     args: {
@@ -121,28 +61,37 @@ export const joinWaitlist = mutation({
             }
         }
 
-        const emailRateLimit = await checkRateLimit(
-            ctx,
-            args.email.toLowerCase(),
-            "waitlist_signup",
-        )
-        if (!emailRateLimit.allowed) {
+        const emailRateLimit = await rateLimiter.check(ctx, "joinWaitlist", {
+            key: args.email.toLowerCase(),
+        })
+        if (emailRateLimit.retryAfter) {
+            if (!emailRateLimit.ok)
+                return {
+                    success: false,
+                    message: `Too many attempts.`,
+                }
+
             return {
                 success: false,
-                message: emailRateLimit.message || "Too many attempts.",
+                message: `Too many attempts. Try again in ${Math.floor(emailRateLimit.retryAfter / 1000)} seconds`,
             }
         }
 
         if (args.clientIdentifier) {
-            const ipRateLimit = await checkRateLimit(
-                ctx,
-                args.clientIdentifier,
-                "waitlist_signup",
-            )
-            if (!ipRateLimit.allowed) {
+            const ipRateLimit = await rateLimiter.check(ctx, "joinWaitlist", {
+                key: args.clientIdentifier,
+            })
+
+            if (ipRateLimit.retryAfter) {
+                if (!ipRateLimit.ok)
+                    return {
+                        success: false,
+                        message: `Too many attempts.`,
+                    }
+
                 return {
                     success: false,
-                    message: ipRateLimit.message || "Too many attempts.",
+                    message: `Too many attempts. Try again in ${Math.floor(ipRateLimit.retryAfter / 1000)} seconds`,
                 }
             }
         }
@@ -241,9 +190,9 @@ export const unsubscribeWaitlist = mutation({
     },
 })
 
-// ============================================================================
+// =============================================================================
 // PUBLIC QUERIES
-// ============================================================================
+// =============================================================================
 
 /**
  * Get waitlist count for a specific product or all products

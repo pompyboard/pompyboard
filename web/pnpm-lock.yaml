@@ -11,6 +11,9 @@ importers:
       '@convex-dev/auth':
         specifier: ^0.0.90
         version: 0.0.90(@auth/core@0.37.4)(convex@1.28.0(react@19.2.0))(react@19.2.0)
+      '@convex-dev/rate-limiter':
+        specifier: ^0.2.14
+        version: 0.2.14(convex@1.28.0(react@19.2.0))(react@19.2.0)
       '@react-three/drei':
         specifier: ^10.7.4
         version: 10.7.4(@react-three/fiber@9.3.0(@types/react@19.1.11)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(three@0.179.1))(@types/react@19.1.11)(@types/three@0.179.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(three@0.179.1)
@@ -174,6 +177,15 @@ packages:
 
   '@convex-dev/eslint-plugin@1.0.0':
     resolution: {integrity: sha512-ublJRBKcLCioNaf1ylkCHD2KzAqWE2RIQ6DA/UgXAXQW5qg4vZSWY8wy+EK11yJkSSxcGfFXDWaE1+cHaWJvNA==}
+
+  '@convex-dev/rate-limiter@0.2.14':
+    resolution: {integrity: sha512-6dQ2ceHFcU8HVXT0QdcgWXCahasMcjne/bWvLZ6qyyk5gZDP4JtjZyidy9HflAOCo1Nc428pgrROnbQBM0QPCQ==}
+    peerDependencies:
+      convex: '>=1.17.0 <1.35.0'
+      react: ^18.2.0 || ^19.0.0
+    peerDependenciesMeta:
+      react:
+        optional: true
 
   '@dimforge/rapier3d-compat@0.12.0':
     resolution: {integrity: sha512-uekIGetywIgopfD97oDL5PfeezkFpNhwlzlaEYNOA0N6ghdsOvh/HYjSMek5Q2O1PYvRSDFcqFVJl4r4ZBwOow==}
@@ -2759,6 +2771,12 @@ snapshots:
       - eslint
       - supports-color
       - typescript
+
+  '@convex-dev/rate-limiter@0.2.14(convex@1.28.0(react@19.2.0))(react@19.2.0)':
+    dependencies:
+      convex: 1.28.0(react@19.2.0)
+    optionalDependencies:
+      react: 19.2.0
 
   '@dimforge/rapier3d-compat@0.12.0': {}
 
