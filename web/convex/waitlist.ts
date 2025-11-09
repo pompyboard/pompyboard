@@ -1,7 +1,3 @@
-/**
- * Waitlist management
- * Public API for managing product launch waitlist
- */
 import { v } from "convex/values"
 
 import { MutationCtx, mutation, query } from "./_generated/server"
@@ -85,9 +81,6 @@ async function checkRateLimit(
 // PUBLIC MUTATIONS
 // ============================================================================
 
-/**
- * Join the waitlist
- */
 export const joinWaitlist = mutation({
     args: {
         email: v.string(),
@@ -162,16 +155,15 @@ export const joinWaitlist = mutation({
             }
         }
 
-        // Check if email already exists
-        const existing = await ctx.db
+        const emailAlreadyExists = await ctx.db
             .query("waitlist")
             .withIndex("by_email", (q) => q.eq("email", args.email))
             .first()
 
-        if (existing) {
+        if (emailAlreadyExists) {
             // If they unsubscribed, reactivate them
-            if (existing.status === "unsubscribed") {
-                await ctx.db.patch(existing._id, {
+            if (emailAlreadyExists.status === "unsubscribed") {
+                await ctx.db.patch(emailAlreadyExists._id, {
                     status: "active",
                     source: args.source,
                     referrer: args.referrer,
@@ -180,7 +172,7 @@ export const joinWaitlist = mutation({
 
                 return {
                     success: true,
-                    waitlistId: existing._id,
+                    waitlistId: emailAlreadyExists._id,
                     message:
                         "Welcome back! You've been re-added to the waitlist.",
                 }
@@ -188,7 +180,7 @@ export const joinWaitlist = mutation({
 
             return {
                 success: true,
-                waitlistId: existing._id,
+                waitlistId: emailAlreadyExists._id,
                 message: "You're already on the waitlist!",
             }
         }
@@ -217,9 +209,6 @@ export const joinWaitlist = mutation({
     },
 })
 
-/**
- * Unsubscribe from waitlist
- */
 export const unsubscribeWaitlist = mutation({
     args: {
         email: v.string(),
@@ -290,10 +279,7 @@ export const getWaitlistCount = query({
     },
 })
 
-/**
- * Check if an email is on the waitlist
- */
-export const checkWaitlistStatus = query({
+export const checkIfEmailOnWaitlist = query({
     args: {
         email: v.string(),
     },
