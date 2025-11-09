@@ -1,4 +1,3 @@
-import MailingListForm from "@/components/mailing-list-form"
 import ShopItem from "@/components/shop-item"
 import { Icon } from "@iconify/react"
 import Link from "next/link"
@@ -381,6 +380,7 @@ export default async function Home() {
                 </div>
             </section>
 
+            {/* todo: re-enable
             <section className="mt-12 mb-16 border-slate-200">
                 <div className="mx-auto max-w-2xl text-center">
                     <h3 className="mb-2 text-2xl font-bold text-slate-900">
@@ -393,6 +393,7 @@ export default async function Home() {
                     <MailingListForm variant="compact" source="homepage" />
                 </div>
             </section>
+            */}
         </div>
     )
 }

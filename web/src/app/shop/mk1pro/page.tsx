@@ -1,4 +1,3 @@
-import MailingListForm from "@/components/mailing-list-form"
 import SpecCard from "@/components/spec-card"
 import { Icon } from "@iconify/react"
 import type { Metadata } from "next"
@@ -35,6 +34,7 @@ export default async function Mk1ProPage() {
                         </h1>
 
                         {/* Social proof */}
+                        {/* todo: re-enable
                         <div className="mb-8 flex items-center justify-center gap-2 text-sm text-slate-600">
                             <Icon
                                 icon="mdi:account-group"
@@ -42,8 +42,10 @@ export default async function Mk1ProPage() {
                             />
                             <span>Join players on the waitlist</span>
                         </div>
+                        */}
 
                         {/* Reframed pricing - value anchor */}
+                        {/* todo: re-enable
                         <div className="mb-2 flex flex-col items-center justify-center">
                             <div className="text-5xl font-bold text-slate-900">
                                 $247
@@ -52,8 +54,10 @@ export default async function Mk1ProPage() {
                                 Launch special pricing
                             </p>
                         </div>
+                        */}
 
                         {/* Primary CTA - mailing list first (lower friction) */}
+                        {/* todo: re-enable
                         <div className="mb-6 flex justify-center">
                             <div className="w-full max-w-md">
                                 <p className="mb-3 text-sm font-medium text-slate-700">
@@ -65,6 +69,7 @@ export default async function Mk1ProPage() {
                                 />
                             </div>
                         </div>
+                        */}
 
                         {/* Secondary actions */}
                         <div className="flex justify-center">
@@ -305,6 +310,7 @@ export default async function Mk1ProPage() {
             </section>
 
             {/* CTA - Create urgency with FOMO */}
+            {/* todo: re-enable
             <section className="bg-slate-900 px-4 py-20">
                 <div className="mx-auto max-w-4xl text-center">
                     <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm">
@@ -339,6 +345,7 @@ export default async function Mk1ProPage() {
                     </a>
                 </div>
             </section>
+            */}
         </div>
     )
 }
