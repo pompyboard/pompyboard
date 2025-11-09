@@ -1,21 +1,20 @@
-# PompyBoard
+# Wonkle
 
 <img
   align="right"
   width="128"
   height="128"
   alt="WBP logo"
-  src="https://avatars.githubusercontent.com/u/217714136"
+  src="https://avatars.githubusercontent.com/u/217714136?s=128&v=4"
 />
 
 [![Discord invite](https://dcbadge.limes.pink/api/server/h27rwcBn73)][discord]
 [![OpenCollective](https://img.shields.io/badge/_-opencollective-gray?style=for-the-badge&logo=opencollective)][opencollective]
 
-Pompyboard is an absolute position pointing device with 8000Hz polling rate.
-
-Pompyboard is made in the open under the [MIT software license][license].\
+Wonkle builds everything in the open under the Open Source
+[MIT software license][license].\
 Everyone is welcomed to contribute and join us in our quest to make the best
-pointing device for our fellow osu! players.\
+devices for our fellow osu! players.\
 If you'd also like to financially contribute to the project, you may do so in
 our [OpenCollective page][opencollective].
 

@@ -4,7 +4,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-    title: "Pompyboard mk.1 Lite - Professional 1000Hz osu! Tablet",
+    title: "Wonkle tablet mk.1 Lite",
     description:
         "High-performance osu! tablet with 1000Hz polling rate, 200 lpmm resolution, and 15mm hover height. Professional quality at an accessible price.",
 }
@@ -28,7 +28,7 @@ export default async function Mk1LitePage() {
 
                     <div className="animate-fade-in text-center">
                         <h1 className="mb-8 text-5xl font-bold tracking-tight text-slate-900 sm:text-6xl md:text-7xl">
-                            Pompyboard mk.1
+                            Wonkle tablet mk.1
                             <br />
                             <span className="gradient-text">Lite</span>
                         </h1>

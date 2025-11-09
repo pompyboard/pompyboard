@@ -1,20 +1,20 @@
 # Contribution Guide
 
 > [!CAUTION]
-> This page is made for contributors building pompyboard.
+> This page is made for wonkle contributors.
 > From this point onward we assume you know what you are doing.
 
 ## Project overview
 
-The pompyboard project can be roughly broken down into 5 parts:
+Our projects can be roughly broken down into 5 parts:
 
-| Part     | Location                                       |
-| -------- | ---------------------------------------------- |
-| PCB      | [`./pcb/`](./pcb/)                             |
-| Firmware | [`./firmware/`](./firmware/)                   |
-| 3D model | [`./3d/`](./3d/)                               |
-| Website  | [`./web/`](./web/)                             |
-| Driver   | [pompyboard/OpenTabletDriver][otd-fork] (fork) |
+| Part     | Location                                   |
+| -------- | ------------------------------------------ |
+| PCB      | [`./pcb/`](./pcb/)                         |
+| Firmware | [`./firmware/`](./firmware/)               |
+| 3D model | [`./3d/`](./3d/)                           |
+| Website  | [`./web/`](./web/)                         |
+| Driver   | [wonkle/OpenTabletDriver][otd-fork] (fork) |
 
 ## Setting up development environment
 
@@ -72,5 +72,5 @@ For example:
 
 <!-- Links -->
 
-[otd-fork]: https://github.com/pompyboard/OpenTabletDriver
+[otd-fork]: https://github.com/wonkleio/OpenTabletDriver
 [otd-contrib]: https://github.com/OpenTabletDriver/OpenTabletDriver/blob/master/CONTRIBUTING.md

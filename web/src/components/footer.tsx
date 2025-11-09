@@ -37,7 +37,7 @@ export default function Footer() {
                                     className="h-3 w-3"
                                 />
                             </Link>{" "}
-                            • © 2025 Pompyboard
+                            • © 2025 Wonkle
                         </p>
                         <p className="mt-0.5 text-xs text-slate-500">
                             Open source hardware and software.
@@ -61,7 +61,7 @@ export default function Footer() {
                         </Link>
                         <Link
                             title="Support us on Open Collective"
-                            href="https://opencollective.com/pompyboard"
+                            href="https://opencollective.com/wonkle"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group flex h-12 w-12 items-center justify-center rounded-full bg-white text-slate-600 shadow-sm transition-all hover:bg-[#7FADF2] hover:text-white hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7FADF2]"
@@ -74,7 +74,7 @@ export default function Footer() {
                         </Link>
                         <Link
                             title="View source code on GitHub"
-                            href="https://github.com/pompyboard/pompyboard"
+                            href="https://github.com/wonkleio/wonkle"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group flex h-12 w-12 items-center justify-center rounded-full bg-white text-slate-600 shadow-sm transition-all hover:bg-slate-900 hover:text-white hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"

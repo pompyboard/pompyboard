@@ -153,7 +153,7 @@ export const joinWaitlist = mutation({
         return {
             success: true,
             waitlistId,
-            message: "Success! You'll be notified when PompyBoard launches.",
+            message: "Success! You'll be notified when the product launches.",
         }
     },
 })

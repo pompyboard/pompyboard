@@ -13,7 +13,7 @@ const notoSans = Noto_Sans({
 })
 
 export const metadata: Metadata = {
-    title: "Pompyboard - Professional osu! Tablets | Open Source",
+    title: "Wonkle tablet - tablets for osu!",
     description:
         "The world's most advanced open-source tablet designed specifically for osu! players. Experience lightning-fast 8000Hz polling, pixel-perfect precision, and total customization.",
 }

@@ -98,13 +98,13 @@
     "nixfmt",
     "nixos",
     "nixpkgs",
+    "opencollective",
     "oxalica",
     "pclk",
     "Phong",
     "pkgs",
     "pnpx",
     "pompy",
-    "pompyboard",
     "pompydev",
     "pompypad",
     "PWRCLK",
@@ -122,6 +122,7 @@
     "usbd",
     "waitlist",
     "wonkle",
+    "wonkleio",
     "wooting"
   ]
 }

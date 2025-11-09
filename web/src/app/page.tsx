@@ -17,7 +17,7 @@ export default async function Home() {
                             <span className="gradient-text">You</span>
                         </h1>
                         <p className="mx-auto mb-12 max-w-2xl text-lg text-slate-600 sm:text-xl md:text-2xl">
-                            Pompyboard is the first and only tablet made
+                            Wonkle tablet is the first and only tablet made
                             specifically for osu! players.
                         </p>
 
@@ -110,7 +110,7 @@ export default async function Home() {
                                 even this very website is available on{" "}
                                 <Link
                                     title="View source code on GitHub"
-                                    href="https://github.com/pompyboard/pompyboard"
+                                    href="https://github.com/wonkleio/wonkle"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-1 font-semibold text-slate-900 underline decoration-slate-300 decoration-2 underline-offset-2 transition-colors hover:text-blue-600 hover:decoration-blue-600 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
@@ -170,7 +170,7 @@ export default async function Home() {
                                 <div>
                                     <div className="mb-2 flex items-center justify-between">
                                         <span className="text-sm font-medium text-slate-700">
-                                            Pompyboard mk.1 Lite
+                                            Wonkle tablet mk.1 Lite
                                         </span>
                                         <span className="text-sm font-semibold text-blue-900">
                                             1000Hz
@@ -183,7 +183,7 @@ export default async function Home() {
                                 <div>
                                     <div className="mb-2 flex items-center justify-between">
                                         <span className="text-sm font-medium text-slate-700">
-                                            Pompyboard mk.1 Pro
+                                            Wonkle tablet mk.1 Pro
                                         </span>
                                         <span className="text-sm font-semibold text-purple-900">
                                             8000Hz ⚡
@@ -231,7 +231,7 @@ export default async function Home() {
                                 <div>
                                     <div className="mb-2 flex items-center justify-between">
                                         <span className="text-sm font-medium text-slate-700">
-                                            Pompyboard mk.1 Lite
+                                            Wonkle tablet mk.1 Lite
                                         </span>
                                         <span className="text-sm font-semibold text-purple-900">
                                             200 lpmm
@@ -244,7 +244,7 @@ export default async function Home() {
                                 <div>
                                     <div className="mb-2 flex items-center justify-between">
                                         <span className="text-sm font-medium text-slate-700">
-                                            Pompyboard mk.1 Pro
+                                            Wonkle tablet mk.1 Pro
                                         </span>
                                         <span className="text-sm font-semibold text-purple-900">
                                             200 lpmm
@@ -292,7 +292,7 @@ export default async function Home() {
                                 <div>
                                     <div className="mb-2 flex items-center justify-between">
                                         <span className="text-sm font-medium text-slate-700">
-                                            Pompyboard mk.1 Lite
+                                            Wonkle tablet mk.1 Lite
                                         </span>
                                         <span className="text-sm font-semibold text-purple-900">
                                             180 × 100 mm
@@ -308,7 +308,7 @@ export default async function Home() {
                                 <div>
                                     <div className="mb-2 flex items-center justify-between">
                                         <span className="text-sm font-medium text-slate-700">
-                                            Pompyboard mk.1 Pro
+                                            Wonkle tablet mk.1 Pro
                                         </span>
                                         <span className="text-sm font-semibold text-purple-900">
                                             180 × 100 mm
@@ -337,7 +337,7 @@ export default async function Home() {
 
                     <div className="grid gap-8 lg:grid-cols-2">
                         <ShopItem
-                            name="Pompyboard mk.1 Lite"
+                            name="Wonkle tablet mk.1 Lite"
                             price="147.27"
                             pollingRate="1000Hz"
                             activeArea="180 × 100 mm"
@@ -345,7 +345,7 @@ export default async function Home() {
                             hoverHeight="15mm"
                         />
                         <ShopItem
-                            name="Pompyboard mk.1 Pro"
+                            name="Wonkle tablet mk.1 Pro"
                             price="247.27"
                             pollingRate="8000Hz"
                             activeArea="180 × 100 mm"

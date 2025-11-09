@@ -21,11 +21,11 @@ export default function Navbar() {
                         src="/logo.png"
                         width={40}
                         height={40}
-                        alt="Pompyboard logo"
+                        alt="wonkle logo"
                         priority
                     />
                     <span className="text-xl font-bold text-slate-900 select-none">
-                        Pompyboard
+                        Wonkle
                     </span>
                 </Link>
 
