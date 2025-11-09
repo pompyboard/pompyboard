@@ -7,6 +7,7 @@
         "dev:frontend": "next dev",
         "dev:backend": "convex dev",
         "build": "convex codegen && next build",
+        "build:frontend": "next build",
         "start": "next start",
         "lint": "eslint"
     },

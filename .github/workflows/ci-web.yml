@@ -31,6 +31,6 @@ jobs:
 
       - run: cd web && pnpm lint
 
-      - run: cd web && pnpm build
+      - run: cd web && pnpm build:frontend
 
       - run: cd web && pnpm prettier -l .
