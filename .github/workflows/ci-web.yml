@@ -32,5 +32,8 @@ jobs:
       - run: cd web && pnpm lint
 
       - run: cd web && pnpm build:frontend
+        env:
+          CONVEX_DEPLOYMENT: some random text
+          NEXT_PUBLIC_CONVEX_URL: some random text
 
       - run: cd web && pnpm prettier -l .
