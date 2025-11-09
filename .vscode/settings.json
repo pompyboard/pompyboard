@@ -2,6 +2,9 @@
   // General
   "editor.formatOnSave": true,
   "editor.rulers": [80],
+  "files.readonlyInclude": {
+    "web/convex/_generated/*": true
+  },
 
   // Nix
   "nix.formatterPath": "nixfmt",
