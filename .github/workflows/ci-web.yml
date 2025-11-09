@@ -31,9 +31,20 @@ jobs:
 
       - run: cd web && pnpm lint
 
+      - name: Create .env file
+        run: |
+          cat > ./web/.env.local<< EOF
+          AUTH_OSU_ID="some random text"
+          AUTH_OSU_SECRET="some random text"
+          AUTH_SECRET="some random text"
+
+          CONVEX_DEPLOYMENT="some random text"
+          NEXT_PUBLIC_CONVEX_URL="some random text"
+
+          STRIPE_SECRET_KEY="some random text"
+          NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY="some random text"
+          EOF
+
       - run: cd web && pnpm build:frontend
-        env:
-          CONVEX_DEPLOYMENT: some random text
-          NEXT_PUBLIC_CONVEX_URL: some random text
 
       - run: cd web && pnpm prettier -l .
