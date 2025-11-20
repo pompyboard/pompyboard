@@ -1,6 +1,8 @@
 import { Icon } from "@iconify/react"
 import Link from "next/link"
 
+import PronounceButton from "./pronounce-button"
+
 export default function Footer() {
     return (
         <footer className="border-t border-slate-200 bg-slate-50 px-4 py-12">
@@ -8,6 +10,10 @@ export default function Footer() {
                 <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
                     {/* Brand and Attribution */}
                     <div className="text-center md:text-left">
+                        <p className="text-sm text-slate-600">
+                            Wonkle • /ˈwɑːŋkəl/
+                            <PronounceButton />
+                        </p>
                         <p className="text-sm text-slate-600">
                             Made with ❤️ by{" "}
                             <Link
