@@ -3,6 +3,7 @@
 import { Icon } from "@iconify/react"
 
 export default function PronounceButton() {
+    // See https://github.com/wonkleio/wonkle/pull/29
     return (
         <button
             onClick={() => new Audio("/wonkle.mp3").play()}
