@@ -61,7 +61,7 @@ export default function Footer() {
                             aria-label="Discord"
                         >
                             <Icon
-                                icon="fa-brands:discord"
+                                icon="simple-icons:discord"
                                 className="h-6 w-6"
                             />
                         </Link>
@@ -99,7 +99,10 @@ export default function Footer() {
                             className="group flex h-12 w-12 items-center justify-center rounded-full bg-white text-slate-600 shadow-sm transition-all hover:bg-slate-900 hover:text-white hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
                             aria-label="GitHub"
                         >
-                            <Icon icon="fa-brands:github" className="h-6 w-6" />
+                            <Icon
+                                icon="simple-icons:github"
+                                className="h-6 w-6"
+                            />
                         </Link>
                         <Link
                             title="Send us an email"
