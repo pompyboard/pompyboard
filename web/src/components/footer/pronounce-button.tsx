@@ -5,7 +5,6 @@ import { Icon } from "@iconify/react"
 export default function PronounceButton() {
     return (
         <button
-            type="button"
             onClick={() => new Audio("/wonkle.mp3").play()}
             className="cursor-pointer rounded px-2 py-1"
         >
