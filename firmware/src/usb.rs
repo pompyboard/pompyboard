@@ -23,8 +23,8 @@ pub fn setup(usb: USB) {
         USB_BUS = Some(
             UsbDeviceBuilder::new(&bus_allocator, UsbVidPid(VENDOR_ID, PRODUCT_ID))
                 .strings(&[StringDescriptors::new(LangID::EN)
-                    .manufacturer("Pompyboard")
-                    .product("Pompyboard Prototype")])
+                    .manufacturer("Wonkle")
+                    .product("Wonkleboard Lite mk.1")])
                 .unwrap()
                 .build(),
         );

@@ -1,0 +1,12 @@
+firmware/target/
+
+/docs/.vitepress/cache/
+/docs/.vitepress/dist/
+
+/pcb/fabrication-toolkit-options.json
+
+/web/.next/
+/web/convex/_generated/
+/web/next-env.d.ts
+
+pnpm-lock.yaml

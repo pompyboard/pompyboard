@@ -1,4 +1,4 @@
-# PompyBoard Firmware
+# Wonkle Firmware
 
 ## Must read
 

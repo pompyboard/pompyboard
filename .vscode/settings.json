@@ -1,118 +1,134 @@
 {
-  // General
-  "editor.formatOnSave": true,
-  "editor.rulers": [80],
+    // General
+    "editor.formatOnSave": true,
+    "editor.rulers": [100],
+    "files.readonlyInclude": {
+        "web/convex/_generated/*": true
+    },
+    "files.associations": {
+        "*.svd": "xml",
+        "*.css": "tailwindcss"
+    },
 
-  // Nix
-  "nix.formatterPath": "nixfmt",
-  "nix.enableLanguageServer": true,
-  "nix.serverPath": "nixd",
-  "[nix]": {
-    "editor.defaultFormatter": "jnoortheen.nix-ide"
-  },
+    // Nix
+    "nix.formatterPath": "nixfmt",
+    "nix.enableLanguageServer": true,
+    "nix.serverPath": "nixd",
+    "[nix]": {
+        "editor.defaultFormatter": "jnoortheen.nix-ide"
+    },
 
-  // Rust
-  "rust-analyzer.check.allTargets": false,
-  "rust-analyzer.check.targets": "thumbv7em-none-eabihf",
-  "[rust]": {
-    "editor.defaultFormatter": "rust-lang.rust-analyzer",
-    "editor.rulers": [100]
-  },
+    // Rust
+    "rust-analyzer.check.allTargets": false,
+    "rust-analyzer.check.targets": "thumbv7em-none-eabihf",
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer"
+    },
 
-  // web
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+    // web
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[postcss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 
-  // Etc
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[toml]": {
-    "editor.defaultFormatter": "tamasfe.even-better-toml"
-  },
+    // Etc
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[toml]": {
+        "editor.defaultFormatter": "tamasfe.even-better-toml"
+    },
 
-  "files.associations": {
-    "*.svd": "xml"
-  },
-
-  // Spelling
-  "cSpell.words": [
-    "BetaHuhn",
-    "cachix",
-    "cfgr",
-    "CHIPSERIE",
-    "clippy",
-    "codegen",
-    "defmt",
-    "devenv",
-    "DIRENV",
-    "direnvrc",
-    "drei",
-    "eabi",
-    "eabihf",
-    "fenix",
-    "gpioa",
-    "GPIOB",
-    "gpioc",
-    "gpioe",
-    "gpiof",
-    "gpioh",
-    "gpioi",
-    "hclk",
-    "iconify",
-    "Intuos",
-    "JLCPCB",
-    "lpmm",
-    "lsusb",
-    "Mablet",
-    "microcontroller",
-    "nixd",
-    "nixfmt",
-    "nixos",
-    "nixpkgs",
-    "oxalica",
-    "pclk",
-    "Phong",
-    "pkgs",
-    "pompy",
-    "pompyboard",
-    "pompydev",
-    "pompypad",
-    "PWRCLK",
-    "rustflags",
-    "rustup",
-    "rybbit",
-    "serde",
-    "supabase",
-    "sysclk",
-    "taplo",
-    "Tdefmt",
-    "thumbv",
-    "Tlink",
-    "trivago",
-    "turbopack",
-    "usbd"
-  ]
+    // Spelling
+    "cSpell.words": [
+        "BetaHuhn",
+        "cachix",
+        "cfgr",
+        "CHIPSERIE",
+        "clippy",
+        "codegen",
+        "defmt",
+        "devenv",
+        "DIRENV",
+        "direnvrc",
+        "drei",
+        "eabi",
+        "eabihf",
+        "fenix",
+        "gpioa",
+        "GPIOB",
+        "gpioc",
+        "gpioe",
+        "gpiof",
+        "gpioh",
+        "gpioi",
+        "hclk",
+        "iconify",
+        "Intuos",
+        "JLCPCB",
+        "lpmm",
+        "lsusb",
+        "Mablet",
+        "microcontroller",
+        "nixd",
+        "nixfmt",
+        "nixos",
+        "nixpkgs",
+        "oklch",
+        "opencollective",
+        "oxalica",
+        "pclk",
+        "Phong",
+        "pkgs",
+        "pnpx",
+        "pompy",
+        "pompydev",
+        "pompypad",
+        "PWRCLK",
+        "rustflags",
+        "rustup",
+        "rybbit",
+        "serde",
+        "supabase",
+        "sysclk",
+        "taplo",
+        "Tdefmt",
+        "thumbv",
+        "Tlink",
+        "trivago",
+        "turbopack",
+        "usbd",
+        "vitepress",
+        "waitlist",
+        "wonkle",
+        "Wonkleboard",
+        "wonkleio",
+        "wooting"
+    ]
 }

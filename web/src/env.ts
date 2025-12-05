@@ -3,12 +3,11 @@ import { createEnv } from "@t3-oss/env-nextjs"
 import { z } from "zod"
 
 export const env = createEnv({
-    server: {
-        AUTH_OSU_ID: z.string(),
-        AUTH_OSU_SECRET: z.string(),
-        AUTH_SECRET: z.string(),
-        DATABASE_URL: z.string(),
+    server: {},
+    client: {
+        NEXT_PUBLIC_CONVEX_URL: z.url(),
     },
-    client: {},
-    experimental__runtimeEnv: {},
+    experimental__runtimeEnv: {
+        NEXT_PUBLIC_CONVEX_URL: process.env.NEXT_PUBLIC_CONVEX_URL,
+    },
 })

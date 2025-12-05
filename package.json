@@ -1,0 +1,9 @@
+{
+    "name": "wonkle",
+    "private": true,
+    "devDependencies": {
+        "@trivago/prettier-plugin-sort-imports": "6.0.0",
+        "prettier": "3.6.2",
+        "prettier-plugin-tailwindcss": "0.7.1"
+    }
+}

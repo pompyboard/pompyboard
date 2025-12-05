@@ -1,26 +1,26 @@
 {
-  "recommendations": [
-    // comment out stuff you don't need
-    // sort stuff in alphabetical order when adding extensions
+    "recommendations": [
+        // comment out stuff you don't need
+        // sort stuff in alphabetical order when adding extensions
 
-    // general
-    "esbenp.prettier-vscode",
-    "fill-labs.dependi",
-    "github.vscode-github-actions",
-    "streetsidesoftware.code-spell-checker",
-    "tamasfe.even-better-toml",
+        // general
+        "esbenp.prettier-vscode",
+        "fill-labs.dependi",
+        "github.vscode-github-actions",
+        "streetsidesoftware.code-spell-checker",
+        "tamasfe.even-better-toml",
 
-    // nix
-    "jnoortheen.nix-ide",
-    "mkhl.direnv",
+        // nix
+        "jnoortheen.nix-ide",
+        "mkhl.direnv",
 
-    // JS/TS
-    "bradlc.vscode-tailwindcss",
-    "dbaeumer.vscode-eslint",
+        // JS/TS
+        "bradlc.vscode-tailwindcss",
+        "dbaeumer.vscode-eslint",
 
-    // rust & embedded
-    "probe-rs.probe-rs-debugger",
-    "rust-lang.rust-analyzer",
-    "zixuanwang.linkerscript" // for memory.x
-  ]
+        // rust & embedded
+        "probe-rs.probe-rs-debugger",
+        "rust-lang.rust-analyzer",
+        "zixuanwang.linkerscript" // for memory.x
+    ]
 }

@@ -1,0 +1,28 @@
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+name: Formatting check
+jobs:
+  ci:
+    name: Formatting check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # https://github.com/pnpm/action-setup
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.23.0 # synced with devenv
+
+      # https://github.com/actions/setup-node
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.11.1 # synced with devenv
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+
+      - run: pnpm install
+
+      - run: pnpm exec prettier -l .

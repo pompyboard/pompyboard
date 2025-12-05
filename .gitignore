@@ -1,4 +1,6 @@
 /_/
 
+node_modules/
+
 /.devenv*
 /.direnv*

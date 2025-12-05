@@ -3,6 +3,7 @@
     "semi": false,
 
     "tabWidth": 4,
+    "printWidth": 100,
     "overrides": [
         {
             "files": ["*.md", "*.yml"],
@@ -12,10 +13,7 @@
         }
     ],
 
-    "plugins": [
-        "@trivago/prettier-plugin-sort-imports",
-        "prettier-plugin-tailwindcss"
-    ],
+    "plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
 
     "importOrder": ["^@core/(.*)$", "^@server/(.*)$", "^@ui/(.*)$", "^[./]"],
     "importOrderSeparation": true,

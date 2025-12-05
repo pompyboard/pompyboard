@@ -1,12 +1,16 @@
 on:
   push:
+    paths:
+      - firmware/**
   pull_request:
+    paths:
+      - firmware/**
   workflow_dispatch:
 
-name: CI
+name: Firmware CI
 jobs:
   ci:
-    name: CI
+    name: Firmware CI
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -33,13 +37,4 @@ jobs:
       #   shell: devenv shell bash -- -e {0}
 
       - run: cd firmware && cargo build --release
-        shell: devenv shell bash -- -e {0}
-
-      - run: cd web && pnpm lint
-        shell: devenv shell bash -- -e {0}
-
-      - run: cd web && pnpm build
-        shell: devenv shell bash -- -e {0}
-
-      - run: cd web && pnpm prettier -l .
         shell: devenv shell bash -- -e {0}

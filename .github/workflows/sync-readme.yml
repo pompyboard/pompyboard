@@ -2,8 +2,6 @@ name: Sync README.md
 
 on:
   push:
-    branches:
-      - master
     paths:
       - README.md
       - .github/sync-readme.yml

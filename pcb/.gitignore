@@ -1,9 +1,9 @@
-/*-backups/
-/fp-info-cache
-/*.lck
+*-backups/
+fp-info-cache
+*.lck
 \#auto_saved_files#
 _autosave*
 
 # "Fabrication Toolkit" plugin
-/production/
+production/
 fabrication-toolkit-options.json
