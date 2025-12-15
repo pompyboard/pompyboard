@@ -13,10 +13,6 @@ Wonkle is also a community of builders that together build the best hardware for
 All of our products are still under development. Our first tablet is estimated to hit the market
 sometime during 2026. Development Status & Roadmap (WIP) will come soon.
 
-## Who are Wonkle tablets for?
-
-Wonkle tablets are targeted towards gamers - especially those who play osu! and FPS games.
-
 ## What makes the Wonkle tablets special?
 
 Wonkle tablets have a much higher polling rate than existing tablets. This means you'll get 
