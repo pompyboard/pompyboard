@@ -13,6 +13,15 @@ Wonkle is also a community of builders that together build the best hardware for
 All of our products are still under development. Our first tablet is estimated to hit the market
 sometime during 2026. Development Status & Roadmap (WIP) will come soon.
 
+## Who are Wonkle tablets for?
+
+Wonkle tablets are targeted towards gamers - especially those who play osu! and FPS games.
+
+## What makes the Wonkle tablets special?
+
+Wonkle tablets have a much higher polling rate than existing tablets. This means you'll get 
+much faster response to your inputs which will be important for gamers.
+
 ## How can I contribute?
 
 Start by reading the [contribution guide](/docs/contribution-guide) and joining our
@@ -20,12 +29,46 @@ Start by reading the [contribution guide](/docs/contribution-guide) and joining 
 
 You can also financially support us through [OpenCollective](https://opencollective.com/wonkle).
 
+
 ## Isn't 8000Hz polling rate too much?
 
 8000Hz polling rate can be overwhelming for many computers. We are providing this option so those
 who can benefit from it can chose to use it. We recommend that you adjust the device's polling
 rate to match your use case using our web-based configuration tool (WIP).
 
-## Have more questions?
 
+
+## What are target specs for the tablets?
+
+*Hall effect tablet*
+- Polling rate: 8000Hz
+- Digitizer dimensions: TBD
+- Digitizer resolution:  TBD
+- Report rate: TBD
+
+*EMR tablet*
+- Polling rate: 1000Hz
+- Active area dimensions: TBD
+- Digitizer resolution:  TBD
+- Report rate: TBD
+
+## How do I configure the tablet?
+
+There will be two methods to configure the tablet
+- A web-based configuration app running in the cloud. 
+- A local standalone configuration app. 
+
+## How does a X Hz polling rate help if the report rate is Y Hz?
+
+TBD
+
+## Which operating systems do Wonkle tablets work work?
+
+TBD
+
+## I already play osu! with a CTL-472/CTL-672, would a Wonkle tablet be an improvement?
+
+TBD
+
+## Have more questions?
 Head over to our [Discord Server](https://discord.com/invite/h27rwcBn73) and ask your questions!
