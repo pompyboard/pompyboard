@@ -15,9 +15,8 @@ sometime during 2026. Development Status & Roadmap (WIP) will come soon.
 
 ## What makes the Wonkle tablets special?
 
-Wonkle tablets are capable of a much higher polling rate (~25x) than other 
-drawing tablets. You'll get much faster response to your inputs which is important
-for gamers.
+Wonkle tablets are capable of a much higher polling rate (~25x) than other drawing tablets.
+You'll get much faster response to your inputs which is important for gamers.
 
 ## How can I contribute?
 
@@ -26,22 +25,22 @@ Start by reading the [contribution guide](/docs/contribution-guide) and joining 
 
 You can also financially support us through [OpenCollective](https://opencollective.com/wonkle).
 
-
 ## Isn't 8000Hz polling rate too much?
 
-8000Hz polling rate can be overwhelming for many computers. We are providing this option
-so those who can benefit from it can chose to use it. We recommend that you adjust the
-device's polling rate to match your use case using our web-based configuration 
-tool (WIP).
+8000Hz polling rate can be overwhelming for many computers. We are providing this option so those
+who can benefit from it can chose to use it. We recommend that you adjust the device's polling
+rate to match your use case using our web-based configuration tool (WIP).
 
 ## What are target specs for the tablets?
 
-*Hall effect tablet*
+_Hall effect tablet_
+
 - Polling rate: 8000Hz
 - Digitizer dimensions: TBD
 - Digitizer resolution: TBD
 
-*EMR tablet*
+_EMR tablet_
+
 - Polling rate: 1000Hz
 - Active area dimensions: TBD
 - Digitizer resolution: TBD
@@ -49,8 +48,9 @@ tool (WIP).
 ## How do I configure the tablet?
 
 There will be two methods to configure the tablet
-- A web-based configuration app running in the cloud. 
-- A local standalone configuration app. 
+
+- A web-based configuration app running in the cloud.
+- A local standalone configuration app.
 
 ## Which operating systems do Wonkle tablets work work?
 
@@ -61,4 +61,5 @@ TBD
 TBD
 
 ## Have more questions?
+
 Head over to our [Discord Server](https://discord.com/invite/h27rwcBn73) and ask your questions!
