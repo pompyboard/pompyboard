@@ -15,8 +15,7 @@ sometime during 2026. Development Status & Roadmap (WIP) will come soon.
 
 ## What makes the Wonkle tablets special?
 
-Wonkle tablets are capable of a much higher polling rate (~25x) than other drawing tablets.
-You'll get much faster response to your inputs which is important for gamers.
+Wonkle tablets are capable of a much higher polling rate (~25x) than other drawing tablets. This means, you'll get many more inputs per second which is important for gamers.
 
 ## How can I contribute?
 
@@ -47,18 +46,17 @@ _EMR tablet_
 
 ## How do I configure the tablet?
 
-There will be two methods to configure the tablet
+_General settings_
 
-- A web-based configuration app running in the cloud.
-- A local standalone configuration app.
+You can use OpenTabletDriver to configure the tablet. This includes using any of the many plug-ins available for OpenTabletDriver.
+
+_Wonkle-specific settings_
+
+There are settings that are unique to Wonkle tablets that are not available in OpenTabletDriver. One example of such a setting is adjusting the polling rate. For these settings you will use a special Wonkle-specific configuration app. This wonkle-specific app is available as both (1) a web-based user experience and (2) a local standalone experience.
 
 ## Which operating systems do Wonkle tablets work work?
 
-TBD
-
-## I already play osu! with a CTL-472/CTL-672, would a Wonkle tablet be an improvement?
-
-TBD
+Wonkle tablets work on Windows, MacOS, and Linux - every operating system that OpenTabletDriver supports.
 
 ## Have more questions?
 
