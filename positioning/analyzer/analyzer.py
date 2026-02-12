@@ -360,7 +360,7 @@ def main():
     parser.add_argument(
         "--visual-debug",
         action="store_true",
-        help="Enable visual debugging (not implemented yet)",
+        help="Enable visual debugging",
     )
 
     args = parser.parse_args()
@@ -384,7 +384,7 @@ def main():
         all_grids = GridRegistry.get_all_grids()
         print("Supported grid types:")
         for grid_type_name, grid_class in all_grids.items():
-            print(f"  - {grid_type_name}")
+            print(f"  - {grid_class.__name__}")
         return
 
     # Handle --list-algorithms-per-grid
