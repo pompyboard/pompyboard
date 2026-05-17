@@ -5,6 +5,7 @@ rust = { version = "1.93.0", profile = "default", targets = "thumbv7em-none-eabi
 
 # indirect dependencies
 "nix:gcc" = "15.2.0" # rust dependency
+uv = "0.10.10"
 
 [plugins]
 nix = "https://github.com/jbadeau/mise-nix"
