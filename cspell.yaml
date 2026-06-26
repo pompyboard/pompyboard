@@ -23,6 +23,7 @@ ignoreRegExpList:
   - '"recommendations"\s*:\s*\[[\s\S]*?\]'
 words:
   - ˈwɑːŋkəl
+  - ADON
   - AGND
   - atopile
   - AVIN
@@ -31,9 +32,11 @@ words:
   - boiz
   - bunx
   - cachix
+  - CCITT
   - CCMRAM
   - cfgr
   - clippy
+  - Cnst
   - codegen
   - COMMONINOUT
   - datasheet
@@ -41,12 +44,16 @@ words:
   - drei
   - eabihf
   - Elec
+  - eocie
+  - eocs
+  - exten
   - gpioa
   - gpioc
   - gpioe
   - gpiof
   - HASL
   - hclk
+  - iads
   - INPC
   - INPH
   - Intuos
@@ -74,6 +81,7 @@ words:
   - opencollective
   - OUTPC
   - OUTPH
+  - oversample
   - PCBA
   - pclk
   - PGND
@@ -93,8 +101,10 @@ words:
   - rybbit
   - sclk
   - serde
+  - smpr
   - SWCLK
   - SWDIO
+  - swstart
   - sysclk
   - TAXM8M4RFDCET2T
   - thumbv
@@ -103,6 +113,7 @@ words:
   - trivago
   - trst
   - turbopack
+  - uninit
   - UART
   - USART
   - usbd
@@ -124,6 +135,7 @@ words:
   - Wonkleboard
   - wonkleio
   - Wonklepad
+  - WYSFI
   - xlink
   - xout
   - Xtal
